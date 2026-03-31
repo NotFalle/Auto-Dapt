@@ -37,7 +37,7 @@ $movies = $result->fetch_all(MYSQLI_ASSOC);
     <?php
 
     foreach ($movies as $movie) {
-        echo '<p>' . $movie['title'] . '</p>';
+        echo '<p>' . $movie['name'] . '</p>';
     }
 
     ?>
