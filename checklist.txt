@@ -1,0 +1,8 @@
+Innan commit:
+
+- Uppdatera versionen i "js/version.js"
+- Kommentera nya versionen ovanför commit knappen
+
+- Kontrollera kod.
+
+Commit! 
