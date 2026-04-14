@@ -16,23 +16,32 @@
     --paragraf-border: #3e46b0;
     --main-body-bg: rgb(103, 103, 164);
 
+
+    /*Font styles*/
+    --brand-name: Helvetica;
 }
 
 body {
     background-color: var(--body-bg);
-
+    margin: 0;
 }
 
-header {
+#hdr-bar {
     background-color: #d18b8b;
     text-align: center;
     margin: auto;
+    line-height: 0.8rem;
     display: flex;
+    justify-content: space-between;
 }
 
-#hdr-middle {
-    background-color: var(--primary);
-    line-height: 0.2rem;
-    padding: 1rem;
-    border-radius: 4rem;
+.hdr-boxes {
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--paragraf-border);
+}
+
+#brand {
+    font-family: var(--brand-name);
 }

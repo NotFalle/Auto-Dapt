@@ -1,5 +1,5 @@
 //The website version
-var VS = "0.0.1"; // Change this.
+var VS = "0.0.2"; // Change this.
 
 
 
