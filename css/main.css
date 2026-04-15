@@ -45,3 +45,9 @@ body {
 #brand {
     font-family: var(--brand-name);
 }
+.button-action{
+    cursor: pointer;
+}
+.menu-icon{
+    font-size: 3rem;
+}

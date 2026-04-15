@@ -73,9 +73,7 @@ $movies = $result->fetch_all(MYSQLI_ASSOC);
         <div id="hdr-bar">
             <div class="hdr-boxes">
                 <p>Meny</p>
-                <i class="fa-notdog fa-solid fa-bars"></i>
-                <i class="fa-duotone fa-solid fa-bars"></i>
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-notdog fa-solid fa-bars button-action menu-icon"></i>
             </div>
             <div id="brand" style="background-color: grey;">
                 <h1 class="poppins-700">Auto-Dapt</h1>
