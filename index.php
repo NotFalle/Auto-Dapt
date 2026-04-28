@@ -69,24 +69,66 @@ $movies = $result->fetch_all(MYSQLI_ASSOC);
 </head>
 
 <body>
-    <header>
-        <div id="hdr-bar">
-            <div class="hdr-boxes">
-                <p>Meny</p>
-                <i class="fa-notdog fa-solid fa-bars button-action menu-icon"></i>
+    <section class="page-banner">
+        <nav>
+            <div class="nav-container">
+                <nav id="nav-con">
+                    <div class="hdr-boxes">
+                    <button class="hamburger">
+                        <p>Meny <i class="fa-notdog fa-solid fa-bars button-action"></i></p>
+                    </button>
+                    <div class="menu">
+                    <a href="contact.php">Kontakta</a>
+                    <a href="">Produkter</a>
+                    <a href="">Forum</a>
+                    </div>
             </div>
-            <div id="brand" style="background-color: grey;">
-                <h1 class="poppins-700">Auto-Dapt</h1>
-                <p class="nunito-400"><i>"Don’t adapt. Don’t waste. Just Auto-Dapt."</i></p>
+                </nav>
+                <div id="brand">
+                    <h1 class="poppins-700">Auto-Dapt</h1>
+                </div>
+                <div class="hdr-boxes">
+                    <p>Logga in <i class="fa-solid fa-circle-user"></i></p>
+                </div>
             </div>
-            <div class="hdr-boxes">
-                <p>Logga in</p>
+        </nav>
+
+        <div class="container">
+            <div class="container-middle">
+                <div class="container-flexbox">
+                    <div class="cnt-flex-left">
+                        <h1 class="poppins-800">Auto-Dapt</h1>
+                        <p>Vi siktar mot en energisnål framtid, en framtid utan energitjuvar. Vårt mål är att skapa lösningar för billigare energi och mindre miljöpåverkan.</p>
+                        <div class="button-row">
+                            <a class="btn-primary" href="#">Button</a>
+                            <a class="btn-primary" href="#">Button</a>
+                            <a class="btn-primary" href="#">Button</a>
+                        </div>
+                    </div>
+                    <div class="cnt-flex-right">
+                        <img src="img/AutoAdapt-circle.png" alt="Product Image">
+                    </div>
+                </div>
+
+
             </div>
         </div>
+    </section>
+
+    <section id="colorpalette">
+        <div id="color1"></div>
+        <div id="color2"></div>
+        <div id="color3"></div>
+        <div id="color4"></div>
+    </section>
+
+    <section id="sandbox">
+        <div id="button1" class="nunito-400">Button1</div>
+        <div id="button2" class="nunito-400">Button2</div>
+    </section>
 
 
-
-    </header>
+    <a href="contact.php">Teleport</a> <!-- Temporary link -->
 
     <script src="js/version.js"></script>
 </body>
