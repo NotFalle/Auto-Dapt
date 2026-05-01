@@ -106,7 +106,7 @@ nav h1 {
 
 .container-flexbox {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .cnt-flex-left {
