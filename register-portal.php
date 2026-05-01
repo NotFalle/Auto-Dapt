@@ -47,77 +47,109 @@
     <!-- Load CSS files and set title -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <title>Auto-Dapt</title>
+    <title>Registrera - Auto-Dapt</title>
 </head>
+<style>
+#strength-bar{ /* Notera att allt nedanför är temporärt och skall ändras i fortsättningen */ 
+    width:100%;
+    height:10px;
+    background:#ddd;
+    border-radius:10px;
+    margin:15px 0;
+    overflow:hidden;
+}
 
+#strength-fill{
+    width:0%;
+    height:100%;
+    background:red;
+    transition:0.3s;
+}
+
+.password-rules p{
+    margin:5px 0;
+    font-size:14px;
+}
+</style>
 <body>
-    <section class="page-banner">
-        <nav>
-            <div class="nav-container">
-           
-                <div class="hdr-boxes">
-                    <div id= "sidenav" class="sidenav">
-                        <div id="sidenav-hdr">
-                            <a href="javascript:void(0)" class="closebutton"
-                            onclick="closeNav()">&times;</a>
-                        </div>
-                        <div id="sidenav-content">
-                            <a href="contact.php" class="btn-animation">Kontakta</a>
-                            <a href="" class="btn-animation">Produkter</a>
-                            <a href="" class="btn-animation">Forum</a>
-                        </div>
-                    </div>
-                    <button onclick="openNav()" tabindex="0" id="menu-btn">
-                        <i class="fa-notdog fa-solid fa-bars button-action"></i>
-                    </button>  
-                </div>
-                <div id="sidenav-overlay"></div>   
-                
-                <div id="brand">
-                    <h1 class="poppins-700">Auto-Dapt</h1>
-                </div>
-                <div class="hdr-boxes">
-                    <a href="login-portal.php" tabindex="0">Logga in <i class="fa-solid fa-circle-user"></i></a>
-                </div>
+    <section class="form-nav">
+        <a href="index.php" class="btn-info form-nav-btn btn-animation">Tillbaka</a>
+    </section>
+    <section class="form">
+        <form action="register.php" method="POST">
+            <div class="form-hdr">
+                <h1 class="poppins-700">Registrera</h1>
             </div>
-        </nav>
-
-        <div class="container">
-            <div class="container-middle">
-                <div class="container-flexbox">
-                    <div class="cnt-flex-left">
-                        <h1 class="poppins-800 text-primary-color">Spara upp till 30% elektricitet!</h1>
-                        <p class="text-primary-color">Vi siktar mot en energisnål framtid, en framtid utan energitjuvar. Vårt mål är att skapa lösningar för billigare energi och mindre miljöpåverkan.</p>
-                        <div class="button-row">
-                            <a class="btn-CTA btn-animation" href="products.php">Köp nu</a>
-                            <a class="btn-info btn-animation" href="#">Så funkar det</a>
-                        </div>
+            <div class="form-body">
+                <p>Registrera dig för att skapa ett konto.</p>
+                <div class="form-group">
+                    <div class="form-label">
+                        <label for="uname">Användarnamn</label>
                     </div>
-                    <div class="cnt-flex-right">
-                        <img src="img/auto-dapt-product.png" alt="Product Image">
+                    <div class="form-input">
+                        <i class="fa-sharp fa-light fa-circle-user"></i>
+                        <input type="text" name="username" id="uname" placeholder="Exempel123" required>
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <div class="form-label">
+                        <label for="mail">E-postadress</label>
+                    </div>
+                    <div class="form-input">
+                        <i class="fa-sharp fa-light fa-envelope"></i>
+                        <input type="email" name="email" id="mail" placeholder="exempel@email.com" required>
+                    </div>
+                </div>
 
+                <div class="form-group">
+                    <div class="form-label">
+                        <label for="pword">Lösenord</label>
+                    </div>
+                    <div class="form-input">
+                        <i class="fa-sharp fa-light fa-key"></i>
+                        <input type="password" name="password" id="pword" placeholder="Avancerad-GaFF_El12!" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-label">
+                        <label for="pword2">Upprepa lösenord</label>
+                    </div>
+                    <div class="form-input">
+                        <i class="fa-sharp fa-light fa-key"></i>
+                        <input type="password" name="password_confirm" id="pword2" placeholder="Hemligt lösenord" required>
+                    </div>
+                </div>
+
+                <div class="password-rules">
+
+                    <div id="strength-bar">
+                        <div id="strength-fill"></div>
+                    </div>
+
+                    <p id="rule-length" data-label="Minst 12 tecken"></p>
+                    <p id="rule-upperlower" data-label="Stora och små bokstäver"></p>
+                    <p id="rule-number" data-label="Minst en siffra"></p>
+                    <p id="rule-symbol" data-label="Minst ett skiljetecken"></p>
+                    <p id="rule-match" data-label="Båda lösenorden matchar"></p>
+
+                </div>
+
+                <?php
+                    if(isset($_GET['error']) && $_GET['error'] == "password"){
+                        echo "<p class='error'>Lösenorden matchar inte.</p>";
+                    }
+                ?>
             </div>
-        </div>
+            <div class="form-btm">
+                <button type="submit" class="no-border btn-CTA btn-animation">Registrera</button>
+                <a href="login-portal.php" class="btn-animation">Jag har redan ett konto <i class="fa-sharp fa-light fa-arrow-right"></i></a>
+            </div>
+        </form>
     </section>
 
-    <section id="colorpalette">
-        <div id="color1"></div>
-        <div id="color2"></div>
-        <div id="color3"></div>
-        <div id="color4"></div>
-    </section>
-
-    <section id="sandbox">
-        <div id="button1" class="nunito-400">Primary</div>
-        <div id="button2" class="nunito-400">Secondary</div>
-    </section>
-
-    <a href="contact.php">Teleport</a> <!-- Temporary link -->
-
-    <script src="js/main.js"></script>
+    <script src="js/password-checker.js"></script>
 </body>
 <footer>
     <p id="version"></p>

@@ -5,4 +5,8 @@ Innan commit:
 
 - Kontrollera kod.
 
+kolla så att man kan tabba - inte kunna tabba längre ner när menyn öppen
+för stora bilder?
+
+
 Commit! 

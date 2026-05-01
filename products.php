@@ -47,81 +47,17 @@
     <!-- Load CSS files and set title -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <title>Auto-Dapt</title>
+    <title>Produkter - Auto-Dapt</title>
 </head>
 
 <body>
-    <section class="page-banner">
-        <nav>
-            <div class="nav-container">
-           
-                <div class="hdr-boxes">
-                    <div id= "sidenav" class="sidenav">
-                        <div id="sidenav-hdr">
-                            <a href="javascript:void(0)" class="closebutton"
-                            onclick="closeNav()">&times;</a>
-                        </div>
-                        <div id="sidenav-content">
-                            <a href="contact.php" class="btn-animation">Kontakta</a>
-                            <a href="" class="btn-animation">Produkter</a>
-                            <a href="" class="btn-animation">Forum</a>
-                        </div>
-                    </div>
-                    <button onclick="openNav()" tabindex="0" id="menu-btn">
-                        <i class="fa-notdog fa-solid fa-bars button-action"></i>
-                    </button>  
-                </div>
-                <div id="sidenav-overlay"></div>   
-                
-                <div id="brand">
-                    <h1 class="poppins-700">Auto-Dapt</h1>
-                </div>
-                <div class="hdr-boxes">
-                    <a href="login-portal.php" tabindex="0">Logga in <i class="fa-solid fa-circle-user"></i></a>
-                </div>
-            </div>
-        </nav>
+    <section class="product-banner">
 
-        <div class="container">
-            <div class="container-middle">
-                <div class="container-flexbox">
-                    <div class="cnt-flex-left">
-                        <h1 class="poppins-800 text-primary-color">Spara upp till 30% elektricitet!</h1>
-                        <p class="text-primary-color">Vi siktar mot en energisnål framtid, en framtid utan energitjuvar. Vårt mål är att skapa lösningar för billigare energi och mindre miljöpåverkan.</p>
-                        <div class="button-row">
-                            <a class="btn-CTA btn-animation" href="products.php">Köp nu</a>
-                            <a class="btn-info btn-animation" href="#">Så funkar det</a>
-                        </div>
-                    </div>
-                    <div class="cnt-flex-right">
-                        <img src="img/auto-dapt-product.png" alt="Product Image">
-                    </div>
-                </div>
+    </section>
+    <section class="products">
 
-
-            </div>
-        </div>
     </section>
 
-    <section id="colorpalette">
-        <div id="color1"></div>
-        <div id="color2"></div>
-        <div id="color3"></div>
-        <div id="color4"></div>
-    </section>
-
-    <section id="sandbox">
-        <div id="button1" class="nunito-400">Primary</div>
-        <div id="button2" class="nunito-400">Secondary</div>
-    </section>
-
-    <a href="contact.php">Teleport</a> <!-- Temporary link -->
-
-    <script src="js/main.js"></script>
 </body>
-<footer>
-    <p id="version"></p>
-    <script src="js/version.js"></script>
-</footer>
 
 </html>
