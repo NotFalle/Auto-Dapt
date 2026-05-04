@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -97,11 +101,11 @@
                         <img src="img/auto-dapt-product.png" alt="Product Image">
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
+
+    <a href="members.php">Till medlemssidorna</a>
 
     <section id="colorpalette">
         <div id="color1"></div>

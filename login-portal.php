@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -66,8 +70,8 @@
                         <label for="uname">Användarnamn</label>
                     </div>
                     <div class="form-input">
-                        <i class="fa-sharp fa-light fa-circle-user"></i>
-                        <input type="text" name="username" id="uname" placeholder="Mystisk Användare" required>
+                        <i class="fa-sharp fa-light fa-circle-user left"></i>
+                        <input class="left-input" type="text" name="username" id="uname" placeholder="Mystisk Användare" required>
                     </div>
                     
                 </div>
@@ -77,8 +81,9 @@
                         <label for="pword">Lösenord</label>
                     </div>
                     <div class="form-input">
-                        <i class="fa-sharp fa-light fa-key"></i>
-                        <input type="password" name="password" id="pword" placeholder="Klurigt Lösenord" required>
+                        <i class="fa-sharp fa-light fa-key left"></i>
+                        <input class="both-input" type="password" name="password" id="pword" placeholder="Klurigt Lösenord" required>
+                        <i class="fa-sharp fa-light fa-eye-slash right toggle-password"></i>
                     </div>
                 </div>
             </div>
@@ -93,6 +98,8 @@
             </div>
         </form>
     </section>
+
+    <script src="js/password-toggle-login.js"></script>
 </body>
 <footer>
     <p id="version"></p>

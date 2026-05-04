@@ -15,6 +15,27 @@ form.addEventListener("submit", function(e){
 
 });
 
+document.querySelectorAll(".toggle-password").forEach(function(icon) {
+    icon.addEventListener("click", function () {
+        
+        const input = this.parentElement.querySelector("input");
+
+        if (input.type === "password") {
+            input.type = "text";
+
+            this.classList.remove("fa-eye-slash");
+            this.classList.add("fa-eye");
+
+        } else {
+            input.type = "password";
+
+            this.classList.remove("fa-eye");
+            this.classList.add("fa-eye-slash");
+        }
+
+    });
+});
+
 function validatePassword(){
 
     let pass1 = password.value;
@@ -51,10 +72,10 @@ function updateRule(id, passed){
 
     if(passed){
         el.innerHTML =
-            "<i class='fa-sharp fa-light fa-circle-check'></i> " + text;
+            "<i class='fa-sharp fa-light fa-circle-check done'></i> " + text;
     } else {
         el.innerHTML =
-            "<i class='fa-sharp fa-light fa-circle-xmark'></i> " + text;
+            "<i class='fa-sharp fa-light fa-circle-xmark not-done'></i> " + text;
     }
 }
 

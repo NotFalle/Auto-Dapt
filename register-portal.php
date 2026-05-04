@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -49,28 +53,6 @@
     <link rel="stylesheet" href="css/fonts.css">
     <title>Registrera - Auto-Dapt</title>
 </head>
-<style>
-#strength-bar{ /* Notera att allt nedanför är temporärt och skall ändras i fortsättningen */ 
-    width:100%;
-    height:10px;
-    background:#ddd;
-    border-radius:10px;
-    margin:15px 0;
-    overflow:hidden;
-}
-
-#strength-fill{
-    width:0%;
-    height:100%;
-    background:red;
-    transition:0.3s;
-}
-
-.password-rules p{
-    margin:5px 0;
-    font-size:14px;
-}
-</style>
 <body>
     <section class="form-nav">
         <a href="index.php" class="btn-info form-nav-btn btn-animation">Tillbaka</a>
@@ -87,8 +69,8 @@
                         <label for="uname">Användarnamn</label>
                     </div>
                     <div class="form-input">
-                        <i class="fa-sharp fa-light fa-circle-user"></i>
-                        <input type="text" name="username" id="uname" placeholder="Exempel123" required>
+                        <i class="fa-sharp fa-light fa-circle-user left"></i>
+                        <input class="left-input" type="text" name="username" id="uname" placeholder="Exempel123" required>
                     </div>
                 </div>
 
@@ -97,8 +79,8 @@
                         <label for="mail">E-postadress</label>
                     </div>
                     <div class="form-input">
-                        <i class="fa-sharp fa-light fa-envelope"></i>
-                        <input type="email" name="email" id="mail" placeholder="exempel@email.com" required>
+                        <i class="fa-sharp fa-light fa-envelope left"></i>
+                        <input class="left-input" type="email" name="email" id="mail" placeholder="exempel@email.com" required>
                     </div>
                 </div>
 
@@ -107,8 +89,9 @@
                         <label for="pword">Lösenord</label>
                     </div>
                     <div class="form-input">
-                        <i class="fa-sharp fa-light fa-key"></i>
-                        <input type="password" name="password" id="pword" placeholder="Avancerad-GaFF_El12!" required>
+                        <i class="fa-sharp fa-light fa-key left"></i>
+                        <input class="both-input" type="password" name="password" id="pword" placeholder="Avancerad-GaFF_El12!" required>
+                        <i class="fa-sharp fa-light fa-eye-slash right toggle-password"></i>
                     </div>
                 </div>
 
@@ -117,8 +100,9 @@
                         <label for="pword2">Upprepa lösenord</label>
                     </div>
                     <div class="form-input">
-                        <i class="fa-sharp fa-light fa-key"></i>
-                        <input type="password" name="password_confirm" id="pword2" placeholder="Hemligt lösenord" required>
+                        <i class="fa-sharp fa-light fa-key left"></i>
+                        <input class="both-input" type="password" name="password_confirm" id="pword2" placeholder="Hemligt lösenord" required>
+                        <i class="fa-sharp fa-light fa-eye-slash right toggle-password"></i>
                     </div>
                 </div>
 

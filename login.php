@@ -1,29 +1,30 @@
 <?php
+    session_start();
 
-require_once('functions.php');
+    if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+        header("Location: register-portal.php");
+        exit;
+    }
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+    require_once('functions.php');
 
-$db = connectToDb();
+    $username = trim($_POST['username']);
+    $password = $_POST['password'];
 
-// Hämta användaren (om den finns)
-$statement = $db->prepare("SELECT * FROM `autodapt-userdatabase` WHERE username = ?");
-$statement->bind_param('s', $username);
-$statement->execute();
-$result = $statement->get_result();
-$user = $result->fetch_assoc();
+    // Kollar lösenord och användarnamn stämmer
+    login($username, $password);
 
-// Om användaren inte finns eller lösenordet är fel
-if (!$user || !password_verify($password, $user['password'])) {
+    // Hämtar data om användaren
+    $user = getUserbyUsername($username);
 
-    header("Location: login-portal.php?error=login");
-    exit();
-}
+    updateLastLogin($username);
 
-// Login lyckades
-$_SESSION['loggedIn'] = TRUE;
-$_SESSION['userId'] = $user['id'];
-header('Location: index.php');
+    // Sätter sessionens variabler utifrån användarens data
+    $_SESSION['loggedIn'] = TRUE;
+    $_SESSION['userId'] = $user['id'];
+    $_SESSION['username'] = $user['username'];
+    $_SESSION['role'] = $user['role'];
+
+    header('Location: index.php');
 
 ?>
