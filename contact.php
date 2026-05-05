@@ -55,8 +55,46 @@
 </head>
 
 <body>
-    <h1>CONTACT</h1>
+    <section class="page-banner">
+        <nav>
+            <div class="nav-container">
+           
+                <div class="hdr-boxes">
+                    <div id= "sidenav" class="sidenav">
+                        <div id="sidenav-hdr">
+                            <a href="javascript:void(0)" class="closebutton"
+                            onclick="closeNav()">&times;</a>
+                        </div>
+                        <div id="sidenav-content">
+                            <a href="index.php" class="btn-animation">Hem</a>
+                            <a href="" class="btn-animation">Produkter</a>
+                            <a href="" class="btn-animation">Forum</a>
+                        </div>
+                    </div>
+                    <button onclick="openNav()" tabindex="0" id="menu-btn">
+                        <i class="fa-notdog fa-solid fa-bars button-action menusize"></i>
+                    </button>  
+                </div>
+                <div id="sidenav-overlay"></div> 
 
+                 <div id="brand">
+                    <h1 class="poppins-700">Auto-Dapt</h1>
+                </div>
+                <div class="hdr-boxes">
+                    <a href="login-portal.php" tabindex="0">Logga in <i class="fa-solid fa-circle-user"></i></a>
+                </div>
+            </div>
+        </nav>
+            <div class="container">
+            <p>giuhgouiuggui</p>
+
+
+            </div>        
+    
+    
+        </div>
+    </section>
+    <script src="js/main.js"></script>
     <script src="js/version.js"></script>
 </body>
 
