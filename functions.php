@@ -49,6 +49,26 @@
         return $result->fetch_assoc();
     }
 
+    // emailExists($email)
+    function emailExists($email) {
+        
+        // Skapa en databasuppkoppling
+        $db = connectToDb();
+
+        // Gör redo en SQL-fråga
+        $statement = $db->prepare("SELECT 1 FROM `autodapt-userdatabase` WHERE email = ?");
+        $statement->bind_param("s", $email);
+
+        // Kör SQL-frågan
+        $statement->execute();
+
+        // Sparar resultatet
+        $result = $statement->get_result();
+
+        // Skickar tillbaka true om e-postadressen finns, annars false
+        return $result->num_rows > 0;
+    }
+
     // redirectWithMessage($url, $message)
     function redirectWithMessage($url, $message) {
         header("Location: $url?message=$message");

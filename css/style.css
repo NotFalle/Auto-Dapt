@@ -424,7 +424,7 @@ body.no-scroll {
 }
 
 .not-done {
-    color: red;
+    color: #ef4444;
 }
 
 .done {

@@ -81,7 +81,14 @@
                     <h1 class="poppins-700">Auto-Dapt</h1>
                 </div>
                 <div class="hdr-boxes">
-                    <a href="login-portal.php" tabindex="0">Logga in <i class="fa-solid fa-circle-user"></i></a>
+                    <?php
+                        // Om inte session-variabel finns eller inte är TRUE
+                        if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
+                            echo "<a href='login-portal.php' tabindex='0'>Logga in</a>";
+                        } else {
+                            echo "<a href='members.php' tabindex='0'>Medlemssidan</i></a>";
+                        }
+                    ?>
                 </div>
             </div>
         </nav>

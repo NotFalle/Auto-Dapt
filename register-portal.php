@@ -121,6 +121,10 @@
                 </div>
 
                 <?php
+                    if(isset($_GET['error']) && $_GET['error'] == "email"){
+                        echo "<p class='error'>E-postadressen finns redan.</p>";
+                    }
+
                     if(isset($_GET['error']) && $_GET['error'] == "password"){
                         echo "<p class='error'>Lösenorden matchar inte.</p>";
                     }

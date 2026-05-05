@@ -12,14 +12,20 @@
     $password = $_POST['password'];
     $password_confirm = $_POST['password_confirm'];
 
+    // Ladda in funktionerna
+    require_once('functions.php');
+
+    // Kontrollera att mail inte redan finns
+    if (emailExists($email)) {
+        header("Location: register-portal.php?error=email");
+        exit;
+    }
+
     // Kontrollera att lösenorden matchar
     if ($password !== $password_confirm) {
         header("Location: register-portal.php?error=password"); // Annars -> skickar tillbaka användaren
         exit;
     };
-
-    // Skapa en databasuppkoppling
-    require_once('functions.php');
 
     // Skapa användaren
     createUser($username, $password, $email);
