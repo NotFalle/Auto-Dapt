@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    require_once "src/functions.php";
+    trackVisitor();
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +85,7 @@
                     <?php
                         // Om inte session-variabel finns eller inte är TRUE
                         if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
-                            echo "<a href='login-portal.php' tabindex='0'>Logga in</a>";
+                            echo "<a href='src/portal/login-portal.php' tabindex='0'>Logga in</a>";
                         } else {
                             echo "<a href='members.php' tabindex='0'>Medlemssidan</i></a>";
                         }
@@ -126,9 +127,8 @@
         <div id="button2" class="nunito-400">Secondary</div>
     </section>
 
-    <a href="contact.php">Teleport</a> <!-- Temporary link -->
-
     <script src="js/main.js"></script>
+    <script src="js/ping.js"></script>
 </body>
 <footer>
     <p id="version"></p>

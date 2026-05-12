@@ -62,6 +62,7 @@
 
     </section>
 
+    <script src="js/ping.js"></script>
 </body>
 
 </html>

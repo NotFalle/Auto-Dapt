@@ -1,7 +1,7 @@
 <?php
-    session_start();
 
-    require_once('functions.php');
+    require_once "src/functions.php";
+    trackVisitor();
 
     // Om inte session-variabel finns eller inte är TRUE
     if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
@@ -37,7 +37,7 @@ body {
     
     if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"){
         echo "<h2>Status: <i style='color: #d4bd0e;'>" . $_SESSION['role'] . "</i></h2>";
-        echo "<a href='admin-panel.php'>Admin panelen</a>";
+        echo "<a href='src/admin/admin-panel.php'>Admin panelen</a>";
     } else {
         echo "<h2>Status: <i style='color: #1c8525;'>" . $_SESSION['role'] . "</i></h2>";
     }
@@ -48,5 +48,7 @@ body {
     <br>
     <a href="index.php">Tillbaka</a>
     <a href="logout.php">Logga ut</a>
+    
+    <script src="js/ping.js"></script>
 </body>
 </html>

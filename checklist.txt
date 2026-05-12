@@ -3,6 +3,8 @@
 - Uppdatera versionen i "js/version.js"
 - Kommentera nya versionen ovanför commit knappen
 
+- Implementera så mycket css kod som möjligt i style.css - ta bort alla temp.css filer
+
 - Kontrollera kod.
 
 kolla så att man kan tabba - inte kunna tabba längre ner när menyn öppen
@@ -15,3 +17,20 @@ Framtida saker att fixa:
 
 Cookies inställningar?
 Kräva javascript aktiverat för att besöka sidan!
+Göra hemsidan PWA supportable.
+Flera olika språksalternativ.
+Kontrollera webbsidans hastighet.
+
+Skapa kommenterad kod!
+
+För skojs skull:
+    Captcha - Kontrollera så att man inte är en bot
+    $ghostMode - Om forumet blir aktivt
+
+
+
+Till framtiden Isac - slipper du förvirring.
+
+Två besökare har olika cookies, med men om inloggade på samma konto -> samma visitor_id.
+Om visitor_id är = null -> inte inloggad.
+Ett visitor_id är kopplat till user_id men cookien(cookie_id) är helt unikt.
