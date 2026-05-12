@@ -85,11 +85,26 @@
                 </div>
             </div>
         </nav>
-            <div class="container">
-            <p>giuhgouiuggui</p>
+        <div id="contactpadge-container">
+            <h1 id="contact-h1"class="poppins-800 text-primary-color">Använd Auto-Dapt idag och spara upp till 30% på el räkningen utan att lyfta ett finger!</h1>
+            <p id="contact-info"class="text-primary-color">Har du frågor eller funderingar över våra smarta adaptrar? Tveka inte att gå in och läsa våra FAQ och har du några övriga frågor så finns vi tillägänliga via telefon 9-17 på vardagar eller skicka ett majl och få svar inom 48 timmar</p>
+            <div id="contact-container">
+                <div id="contact-e-post">
+                    iwfaiowfiowf
+                </div>
+               
+                <div id="contact-phone-number">
+                    pewfpiewwegpih
+                </div>
 
+                
+            </div>
 
-            </div>        
+        </div>
+           
+        <div class="container">
+            </div>    
+            <p>fodnnergonergoerg</p>    
     
     
         </div>
