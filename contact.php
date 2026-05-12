@@ -56,8 +56,61 @@
 </head>
 
 <body>
-    <h1>CONTACT</h1>
+    <section class="page-banner">
+        <nav>
+            <div class="nav-container">
+           
+                <div class="hdr-boxes">
+                    <div id= "sidenav" class="sidenav">
+                        <div id="sidenav-hdr">
+                            <a href="javascript:void(0)" class="closebutton"
+                            onclick="closeNav()">&times;</a>
+                        </div>
+                        <div id="sidenav-content">
+                            <a href="index.php" class="btn-animation">Hem</a>
+                            <a href="" class="btn-animation">Produkter</a>
+                            <a href="" class="btn-animation">Forum</a>
+                        </div>
+                    </div>
+                    <button onclick="openNav()" tabindex="0" id="menu-btn">
+                        <i class="fa-notdog fa-solid fa-bars button-action menusize"></i>
+                    </button>  
+                </div>
+                <div id="sidenav-overlay"></div> 
 
+                 <div id="brand">
+                    <h1 class="poppins-700">Auto-Dapt</h1>
+                </div>
+                <div class="hdr-boxes">
+                    <a href="login-portal.php" tabindex="0">Logga in <i class="fa-solid fa-circle-user"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div id="contactpadge-container">
+            <h1 id="contact-h1"class="poppins-800 text-primary-color">Använd Auto-Dapt idag och spara upp till 30% på el räkningen utan att lyfta ett finger!</h1>
+            <p id="contact-info"class="text-primary-color">Har du frågor eller funderingar över våra smarta adaptrar? Tveka inte att gå in och läsa våra FAQ och har du några övriga frågor så finns vi tillägänliga via telefon 9-17 på vardagar eller skicka ett majl och få svar inom 48 timmar</p>
+            <div id="contact-container">
+                <div id="contact-e-post">
+                    iwfaiowfiowf
+                </div>
+               
+                <div id="contact-phone-number">
+                    pewfpiewwegpih
+                </div>
+
+                
+            </div>
+
+        </div>
+           
+        <div class="container">
+            </div>    
+            <p>fodnnergonergoerg</p>    
+    
+    
+        </div>
+    </section>
+    <script src="js/main.js"></script>
     <script src="js/version.js"></script>
 </body>
 

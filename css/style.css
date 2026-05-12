@@ -265,8 +265,41 @@ nav h1 {
 body.no-scroll {
     overflow: hidden;
 }
-
-
+/* ######################################## */
+/* ############## Contact ################ */
+/* ######################################## */
+#contactpadge-container{
+    margin:auto;
+    width: 60rem;
+    
+}
+#contact-h1{
+    padding-top: 5rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+#contact-info{
+    text-align:center;
+    font-size: 1.5rem;
+}
+#contact-container{
+    display: flex;
+    gap: 3rem;
+    
+}
+#contact-e-post{
+background-color:  #025293;
+width: 20rem;
+height: 10rem;
+margin: auto;
+padding: ;
+}
+#contact-phone-number{
+background-color: #025293;
+width: 20rem;
+height: 10rem;
+margin: auto;
+}
 /* ######################################## */
 /* ############## PRODUCTS ################ */
 /* ######################################## */
@@ -431,6 +464,8 @@ body.no-scroll {
     color: #16A34A;
 }
 
+
+
 /* ####################################### */
 /* ############## SANDBOX ################ */
 /* ####################################### */
@@ -490,4 +525,7 @@ body.no-scroll {
 
 #color4 {
     background-color: #16A34A;
+}
+.menusize{
+    font-size: 3rem;
 }
