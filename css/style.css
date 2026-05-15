@@ -285,20 +285,178 @@ body.no-scroll {
 #contact-container{
     display: flex;
     gap: 3rem;
+    margin-top: 6rem;
     
 }
-#contact-e-post{
-background-color:  #025293;
-width: 20rem;
-height: 10rem;
+.contact-flexbox{
+background: -webkit-linear-gradient(-45deg,#1181ad, #06075a);
+width: 23rem;
+height: 15rem;
 margin: auto;
-padding: ;
+padding: 2rem;
+padding-top: 0;
+border-radius: 1.5rem;
+border: 0.3rem solid;
+border-color: #2c84c2;
+box-shadow: 0 0 3rem rgb(255, 255, 0);
 }
-#contact-phone-number{
-background-color: #025293;
-width: 20rem;
-height: 10rem;
-margin: auto;
+.contact-button{
+    background-color: rgb(0, 170, 255);
+    max-width: fit-content;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+.contact-contactinfo{
+font-size: 1rem;
+color: #ffffff;
+}
+#contact-button-text{
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+h2{color: #ffffff;}
+
+.contact-button:hover {
+    transform: scale(1.1);
+    transition: 1.1s;
+    cursor: pointer;
+}
+/* ######################################## */
+/* ############## Company-Contact ######### */
+/* ######################################## */
+#company-contact-container{
+    width: 90rem;
+    height: 100rem;
+    display: flex;
+    margin: auto;
+    gap: 5rem;
+    justify-content: center;
+    padding: 5rem;
+    padding-top: 1rem;
+}
+#company-contact-box1{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #00145f;
+    width: 50rem;
+    height: 90rem;
+}
+#company-contact-box2{
+    background-color: #00145f;
+    width: 30rem;
+    height: 90rem;
+}
+.company-contact-h1{
+    font-size: 2.5rem;
+    color: white;
+}
+.company-contact-text{
+    font-size: 1.3rem;
+    color: white;
+}
+/*form*/
+#contact-form{
+    background: #001b5c;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.contact-label {
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-span {
+    color: #ff5b5b;
+}
+
+.contact-input,#contact-writingspace {
+    padding: 1rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+#contact-writingspace {
+    resize: vertical;
+    min-height: 12rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    }
+
+#checkbox-input {
+    width: 2rem;
+    height: 2rem;
+}
+
+#checkbox-label {
+    margin: 0;
+    color: #449bf8;
+    font-size: 1rem;
+}
+
+.captcha {
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#captcha-box {
+    width: 2rem;
+    height: 2rem;
+    border: 0.2rem solid #4d4d4d;
+}
+#captcha-box:hover{
+    cursor: pointer;
+}
+#captcha-text {
+    font-size: 2rem;
+    color: #000000;
+}
+
+    #submit {
+      width: 100%;
+      padding: 2rem;
+      background: #6c737e;
+      border: none;
+      border-radius: 0.8rem;
+      color: rgb(255, 255, 255);
+      font-size: 2rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #submit:hover {
+      background: #585858;
+    }
+.back-btn {
+    padding: 1rem;
+    border: none;
+    background-color: #1b1b1b;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+
+.back-btn:hover {
+  background-color: #555;
+  cursor: pointer;
 }
 /* ######################################## */
 /* ############## PRODUCTS ################ */

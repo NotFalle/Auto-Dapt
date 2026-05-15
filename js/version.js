@@ -1,5 +1,5 @@
 //The website version
-var VS = "0.0.5"; // Ändra detta varje stor fungerande uppdatering.
+var VS = "0.0.6"; // Ändra detta varje stor fungerande uppdatering.
 
 
 

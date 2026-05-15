@@ -87,14 +87,19 @@
         </nav>
         <div id="contactpadge-container">
             <h1 id="contact-h1"class="poppins-800 text-primary-color">Använd Auto-Dapt idag och spara upp till 30% på el räkningen utan att lyfta ett finger!</h1>
-            <p id="contact-info"class="text-primary-color">Har du frågor eller funderingar över våra smarta adaptrar? Tveka inte att gå in och läsa våra FAQ och har du några övriga frågor så finns vi tillägänliga via telefon 9-17 på vardagar eller skicka ett majl och få svar inom 48 timmar</p>
+            <p id="contact-info"class="text-primary-color">Har du frågor eller funderingar över våra smarta adaptrar? Tveka inte att gå in och läsa våra FAQ och har du några övriga frågor så finns vi tillägänliga via telefon <strong>9-17 </strong> på vardagar eller skicka ett majl och få svar inom <strong>48</strong> timmar</p>
             <div id="contact-container">
-                <div id="contact-e-post">
-                    iwfaiowfiowf
+                <div class="contact-flexbox">
+                    <h2>Våra kontakt uppgifter:</h2>
+                    <button class="contact-button"><p class="contact-contactinfo"class="text-primary-color"><b>Ring oss på: 46-70 123 45 67</b></p></button>
+                     <button class="contact-button" onclick="location.href='https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjgCQbTSxKfVdHqRQGJCJbdMWvtvhcwpMdJLlfvlMKMBTqbCHLzlWQtTjRzxSgzmCwGbbg'"><p class="contact-contactinfo"class="text-primary-color"><b>Skirv mail till: Auto-Dapt@gmail.com</b></p></button>
                 </div>
                
-                <div id="contact-phone-number">
-                    pewfpiewwegpih
+                <div class="contact-flexbox">
+                    <h2>Intresserad av att sammarbeta?</h2>
+                    <button class="contact-button" onclick="location.href='företag-contact.php'">
+                        <p id="contact-button-text"class="text-primary-color"><b>Kontakt oss</b></p>
+                    </button>
                 </div>
 
                 
