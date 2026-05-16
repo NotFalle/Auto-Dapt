@@ -66,8 +66,8 @@
                             onclick="closeNav()">&times;</a>
                         </div>
                         <div id="sidenav-content">
-                            <a href="contact.php" class="btn-animation">Kontakta</a>
-                            <a href="products.php" class="btn-animation">Produkter</a>
+                            <a href="index.php" class="btn-animation">Hem</a>
+                            <a href="contact.php" class="btn-animation">kontakt</a>
                             <a href="" class="btn-animation">Forum</a>
                         </div>
                     </div>

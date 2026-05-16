@@ -67,7 +67,7 @@
                         </div>
                         <div id="sidenav-content">
                             <a href="index.php" class="btn-animation">Hem</a>
-                            <a href="" class="btn-animation">Produkter</a>
+                            <a href="products.php" class="btn-animation">Produkter</a>
                             <a href="" class="btn-animation">Forum</a>
                         </div>
                     </div>
