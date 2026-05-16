@@ -115,7 +115,6 @@
         </div>
     </section>
     <script src="js/main.js"></script>
-    <script src="js/version.js"></script>
 </body>
 
 </html>

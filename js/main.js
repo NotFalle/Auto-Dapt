@@ -12,6 +12,52 @@ function closeNav() {
   document.documentElement.classList.remove('sidebar-open'); 
 }
 
+//Byta higlited bilden
+
+const thumbnails = document.querySelectorAll(".moreimedges");
+const mainImage = document.querySelector(".selected-image img");
+const selectedImage = document.querySelector(".selected-image");
+
+thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener("click", () => {
+
+        const newImage = thumbnail.querySelector("img").src;
+        mainImage.src = newImage;
+
+        thumbnails.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        thumbnail.classList.add("active");
+        if(thumbnail.id === "moreimeges-special-black"){
+          selectedImage.style.backgroundColor = "black";}
+        else if(thumbnail.id === "moreimeges-special-white"){
+          selectedImage.style.backgroundColor = "white";}
+        else {
+          selectedImage.style.backgroundColor = "#eaeaea";
+        }
+    });
+});
+
+//Meny selection
+
+const tabs = document.querySelectorAll(".selection-choice");
+const contents = document.querySelectorAll(".selection-content");
+
+tabs.forEach(key => {
+    key.addEventListener("click", () => {
+
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        key.classList.add("active");
+
+        const target = document.getElementById(key.dataset.key);
+        if (target) {
+            target.classList.add("active");
+        }
+    });
+});
 
 
 
