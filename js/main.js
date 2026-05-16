@@ -14,7 +14,7 @@ function closeNav() {
 
 //Byta higlited bilden
 
-const thumbnails = document.querySelectorAll(".moreimedges");
+const thumbnails = document.querySelectorAll(".moreimages");
 const mainImage = document.querySelector(".selected-image img");
 const selectedImage = document.querySelector(".selected-image");
 
@@ -29,10 +29,11 @@ thumbnails.forEach(thumbnail => {
         });
 
         thumbnail.classList.add("active");
-        if(thumbnail.id === "moreimeges-special-black"){
+        if(thumbnail.id === "moreimages-special-black"){
           selectedImage.style.backgroundColor = "black";}
-        else if(thumbnail.class === "moreimeges-special-white"){
-          selectedImage.style.backgroundColor = "white";}
+        else if (thumbnail.classList.contains("moreimages-special-white")) {
+            selectedImage.style.backgroundColor = "white";
+        } 
         else {
           selectedImage.style.backgroundColor = "#eaeaea";
         }

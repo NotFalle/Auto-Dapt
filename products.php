@@ -97,21 +97,21 @@
                     <img src="img/auto-dapt-product.png" alt="Product Image">
                 </div>
 
-                <div id="moreimedges-container">
+                <div id="moreimages-container">
 
-                    <div class="moreimedges active">
+                    <div class="moreimages active">
                         <img src="img/auto-dapt-product.png" alt="Product Image">
                     </div>
 
-                    <div class="moreimedges" id="moreimeges-special-black">
+                    <div class="moreimages" id="moreimages-special-black">
                         <img src="img/auto-dapt-product-pink.png" alt="Product Image">
                     </div>
 
-                    <div class="moreimedges moreimeges-special-white">
+                    <div class="moreimages moreimages-special-white">
                         <img src="img/auto-dapt-product-blue.png" alt="Product Image">
                     </div>
 
-                    <div class="moreimedges moreimeges-special-white">
+                    <div class="moreimages moreimages-special-white">
                         <img src="img/auto-dapt-product-yellow.png" alt="Product Image">
                     </div>
                 </div>
@@ -168,7 +168,7 @@
                 </div>
 
                 <div class="selection-content" id="specefications">
-                    <hr class="proudct-hr">
+                    <hr>
                     <h2>Specifikationer - Auto-Dapt</h2>
                     <ul class="product-list">
                         <li>Strömförsörjning: 230V AC (standard vägguttag)</li>
@@ -180,7 +180,7 @@
                 </div>
             <!-- All yours Isac :)-->
                 <div class="selection-content" id="reviews">
-                    <hr class="proudct-hr">
+                    <hr>
                     <p> 4.9/5 baserat på 154 reviews</p>
                 </div>
 
