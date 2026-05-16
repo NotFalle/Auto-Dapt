@@ -107,17 +107,17 @@
                         <img src="img/auto-dapt-product-pink.png" alt="Product Image">
                     </div>
 
-                    <div class="moreimedges" id="moreimeges-special-white">
+                    <div class="moreimedges moreimeges-special-white">
                         <img src="img/auto-dapt-product-blue.png" alt="Product Image">
                     </div>
 
-                    <div class="moreimedges" id="moreimeges-special-white">
+                    <div class="moreimedges moreimeges-special-white">
                         <img src="img/auto-dapt-product-yellow.png" alt="Product Image">
                     </div>
                 </div>
             </section>
             <aside id="product-aside">
-                <h1 id="product-padge-h1">Wireless Noise Cancelling Headphones</h1>
+                <h1 id="product-padge-h1">Auto-Dapt: Smartadaptern för dig</h1>
                 <div id="rating">
                     <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span id="rating-text">(4.9) 154 reviews</span></p>
                 </div>
@@ -130,7 +130,7 @@
                 <p class="product-description">Auto-Dapt gör dina vanliga enheter smarta på några sekunder. Styr lampor och elektronik direkt från mobilen med enkel installation och stabil uppkoppling. En smart och smidig lösning för ett modernare hem.</p>
 
                 <div id="product-buy-buttons">
-                    <button id="shopping-cart-button"><i class="fa-utility fa-semibold fa-cart-shopping"></i>Lägg till i kund vagn</button>
+                    <button id="shopping-cart-button"><i class="fa-utility fa-semibold fa-cart-shopping"></i>Lägg till i kundvagn</button>
                     <button id="buy-button">Köp nu!</button>
                 </div>
             </aside>
