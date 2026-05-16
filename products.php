@@ -117,7 +117,7 @@
                 </div>
             </section>
             <aside id="product-aside">
-                <h1 id="product-padge-h1">Auto-Dapt: Smartadaptern för dig</h1>
+                <h1 id="product-padge-h1">Auto-Dapt: Smart Adaptern för dig</h1>
                 <div id="rating">
                     <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span id="rating-text">(4.9) 154 reviews</span></p>
                 </div>
