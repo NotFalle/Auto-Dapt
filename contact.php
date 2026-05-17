@@ -91,7 +91,7 @@
             <div id="contact-container">
                 <div class="contact-flexbox">
                     <h2>Våra kontakt uppgifter:</h2>
-                    <button class="contact-button"><p class="contact-contactinfo"class="text-primary-color"><b>Ring oss på: 46-70 123 45 67</b></p></button>
+                    <button class="contact-button"><p class="contact-contactinfo text-primary-color"><b>Ring oss på: 46-70 123 45 67</b></p></button>
                      <button class="contact-button" onclick="location.href='https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjgCQbTSxKfVdHqRQGJCJbdMWvtvhcwpMdJLlfvlMKMBTqbCHLzlWQtTjRzxSgzmCwGbbg'"><p class="contact-contactinfo"class="text-primary-color"><b>Skirv mail till: Auto-Dapt@gmail.com</b></p></button>
                 </div>
                
