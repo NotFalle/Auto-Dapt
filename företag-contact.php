@@ -67,7 +67,7 @@
                         </div>
                         <div id="sidenav-content">
                             <a href="index.php" class="btn-animation">Hem</a>
-                            <a href="" class="btn-animation">Produkter</a>
+                            <a href="products.php" class="btn-animation">Produkter</a>
                             <a href="" class="btn-animation">Forum</a>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                 </div>
             </div>
         </nav>
-        <button class="back-btn" onclick="history.back()">⬅ Tillbaka</button>
+        <button class="back-btn" onclick="history.back()">Tillbaka</button>
         <div id="company-contact-container">
             <div id="company-contact-box1">
                 <h1 class="company-contact-h1" class="poppins-800 text-primary-color">Ny företagare? och letar efter en möjlighet att växa? Tveka inte på att kontakta oss! </h1>
@@ -139,18 +139,10 @@
                         <input id="captcha-box" type="checkbox" required>
                         <p class="poppins-700" id="captcha-text">Jag är inte en robot</p>
                     </div>
-
                     <button id="submit" type="submit">Skicka</button>
-
                 </form>
             </div>
-
-
         </div>
-
-
-
-
     </section>
     <script src="js/main.js"></script>
 </body>

@@ -94,7 +94,7 @@
                         <p class="text-primary-color">Vi siktar mot en energisnål framtid, en framtid utan energitjuvar. Vårt mål är att skapa lösningar för billigare energi och mindre miljöpåverkan.</p>
                         <div class="button-row">
                             <a class="btn-CTA btn-animation" href="products.php">Köp nu</a>
-                            <a class="btn-info btn-animation" href="#">Så funkar det</a>
+                            <a class="btn-info btn-animation" href="info-padge.php">Så funkar det</a>
                         </div>
                     </div>
                     <div class="cnt-flex-right">

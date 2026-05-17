@@ -270,8 +270,7 @@ body.no-scroll {
 /* ######################################## */
 #contactpadge-container{
     margin:auto;
-    width: 60rem;
-    
+    width: 60rem;   
 }
 #contact-h1{
     padding-top: 5rem;
@@ -445,7 +444,7 @@ h2{color: #ffffff;}
 .back-btn {
     padding: 1rem;
     border: none;
-    background-color: #1b1b1b;
+    background-color: #00145f;
     color: white;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -581,10 +580,11 @@ h2{color: #ffffff;}
 }
 #shopping-cart-button{
     background:rgb(0, 0, 0);
-    color:rgb(255, 255, 255);
+    color: white;
 }
 #buy-button{
-    background:rgb(255, 255, 255);
+    background-color: #22C55E;
+    color: white;
 }
 #product-bottom-section{
     margin-top:5rem;
@@ -672,7 +672,27 @@ h2{color: #ffffff;}
     display: flex;
     flex-direction: row;
 }
-
+/* ################################################## */
+/* ############## Informations sida ################# */
+/* ################################################## */
+#info-padge-contatiner{
+    width: 70rem;
+    height: 100rem;
+    margin: auto;
+    gap: 5rem;
+    background-color: #00145f;
+    padding: 5rem;
+    padding-top: 1rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+}
+.info-padge-h1{
+    color: white;
+}
+.info-padge-text{
+    color: white;
+    font-size: 1.3rem;
+}
 /* ################################################## */
 /* ############## Login and Register ################ */
 /* ################################################## */
