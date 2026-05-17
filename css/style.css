@@ -60,7 +60,9 @@ footer {
 /* ################################################### */
 /* ############## Homepage navigation ################ */
 /* ################################################### */
-
+*{
+    box-sizing: border-box;
+}
 .page-banner {
 	background: url('../img/bg-banner.svg') no-repeat;
 	width: 100%;
@@ -79,7 +81,8 @@ nav h1 {
 }
 
 .nav-container {
-    width: 1000px;
+    width: 90%;
+    max-width: 1000px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -121,7 +124,8 @@ nav h1 {
 }
 
 .container-middle {
-    width: 1000px;
+    width: 90%;
+    max-width: 1000px;
     margin: auto;
     margin-top: 5rem;
     padding: 2rem;
@@ -130,6 +134,7 @@ nav h1 {
 .container-flexbox {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .cnt-flex-left {
@@ -137,7 +142,9 @@ nav h1 {
 }
 
 .cnt-flex-right img {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 }
 
 .button-row {
@@ -265,12 +272,16 @@ nav h1 {
 body.no-scroll {
     overflow: hidden;
 }
+
+
 /* ######################################## */
 /* ############## Contact ################ */
 /* ######################################## */
 #contactpadge-container{
-    margin:auto;
-    width: 60rem;   
+    margin: auto;
+    width: 90%;
+    max-width: 60rem;
+    padding: 1rem;
 }
 #contact-h1{
     padding-top: 5rem;
@@ -285,19 +296,22 @@ body.no-scroll {
     display: flex;
     gap: 3rem;
     margin-top: 6rem;
+    flex-wrap: wrap;
+    justify-content: center;
     
 }
 .contact-flexbox{
-background: -webkit-linear-gradient(-45deg,#1181ad, #06075a);
-width: 23rem;
-height: 15rem;
-margin: auto;
-padding: 2rem;
-padding-top: 0;
-border-radius: 1.5rem;
-border: 0.3rem solid;
-border-color: #2c84c2;
-box-shadow: 0 0 3rem rgb(255, 255, 0);
+    background: -webkit-linear-gradient(-45deg,#1181ad, #06075a);
+    width: 100%;
+    max-width: 23rem;
+    min-height: 15rem;
+    margin: auto;
+    padding: 2rem;
+    padding-top: 0;
+    border-radius: 1.5rem;
+    border: 0.3rem solid;
+    border-color: #2c84c2;
+    box-shadow: 0 0 3rem rgb(255, 255, 0);
 }
 .contact-button{
     background-color: rgb(0, 170, 255);
@@ -320,12 +334,36 @@ h2{color: #ffffff;}
     transition: 1.1s;
     cursor: pointer;
 }
+@media (max-width: 48rem){
+
+#contact-h1{
+    font-size: 1.8rem;
+}
+
+#contact-info{
+    font-size: 1.1rem;
+}
+
+#contact-container{
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-flexbox{
+    padding: 1.5rem;
+}
+
+#contact-button-text{
+    font-size: 1.2rem;
+}
+}
 /* ######################################## */
 /* ############## Company-Contact ######### */
 /* ######################################## */
 #company-contact-container{
-    width: 90rem;
-    height: 100rem;
+    width: 90%;
+    max-width: 90rem;
+    height: fit-content;
     display: flex;
     margin: auto;
     gap: 5rem;
@@ -337,13 +375,13 @@ h2{color: #ffffff;}
     padding-left: 2rem;
     padding-right: 2rem;
     background-color: #00145f;
-    width: 50rem;
-    height: 90rem;
+    max-width: 50rem;
+    min-height: 90rem;
 }
 #company-contact-box2{
     background-color: #00145f;
-    width: 30rem;
-    height: 90rem;
+    max-width: 30rem;
+    min-height: 90rem;
 }
 .company-contact-h1{
     font-size: 2.5rem;
@@ -372,6 +410,7 @@ h2{color: #ffffff;}
 }
 
 .contact-input,#contact-writingspace {
+     width: 100%;
     padding: 1rem;
     border: none;
     border-radius: 0.6rem;
@@ -394,7 +433,7 @@ h2{color: #ffffff;}
 
 #checkbox-input {
     width: 2rem;
-    height: 2rem;
+    min-height: 2rem;
 }
 
 #checkbox-label {
@@ -415,7 +454,7 @@ h2{color: #ffffff;}
 
 #captcha-box {
     width: 2rem;
-    height: 2rem;
+    min-height: 2rem;
     border: 0.2rem solid #4d4d4d;
 }
 #captcha-box:hover{
@@ -457,6 +496,38 @@ h2{color: #ffffff;}
   background-color: #555;
   cursor: pointer;
 }
+@media (max-width: 48rem){
+    
+#company-contact-container{
+    flex-direction: column;
+    width: 95%;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+#company-contact-box1,#company-contact-box2{
+    width: 100%;
+    min-width: 100%;
+}
+
+.back-btn{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+#submit{
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.captcha{
+    flex-wrap: wrap;
+}
+
+#captcha-text{
+    font-size: 1rem;
+}
+}
 /* ######################################## */
 /* ############## PRODUCTS ################ */
 /* ######################################## */
@@ -495,7 +566,7 @@ h2{color: #ffffff;}
 }
 .moreimages{
     width:5.6rem;
-    height:5.6rem;
+    min-height:5.6rem;
     background:#e8e8e8;
     border-radius:0.7rem;
     padding:0.6rem;
@@ -676,8 +747,8 @@ h2{color: #ffffff;}
 /* ############## Informations sida ################# */
 /* ################################################## */
 #info-padge-contatiner{
-    width: 70rem;
-    height: 100rem;
+    max-width: 70rem;
+    min-height: 100rem;
     margin: auto;
     gap: 5rem;
     background-color: #00145f;

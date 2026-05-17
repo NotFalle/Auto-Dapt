@@ -51,7 +51,7 @@
     <!-- Load CSS files and set title -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <title>Kontakt -Auto-Dapt</title>
+    <title>Kontakt - Auto-Dapt</title>
 </head>
 
 <body>
