@@ -52,7 +52,7 @@
     <!-- Load CSS files and set title -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <title>Auto-Dapt</title>
+    <title>Hem - Autodapt</title>
 </head>
 
 <body>
@@ -67,9 +67,8 @@
                             onclick="closeNav()">&times;</a>
                         </div>
                         <div id="sidenav-content">
-                            <a href="contact.php" class="btn-animation">Kontakta</a>
+                            <a href="contact.php" class="btn-animation">Kontakt</a>
                             <a href="products.php" class="btn-animation">Produkter</a>
-                            <a href="" class="btn-animation">Forum</a>
                         </div>
                     </div>
                     <button onclick="openNav()" tabindex="0" id="menu-btn">
@@ -111,20 +110,6 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <a href="/src/user/settings.php">Till medlemssidorna</a>
-
-    <section id="colorpalette">
-        <div id="color1"></div>
-        <div id="color2"></div>
-        <div id="color3"></div>
-        <div id="color4"></div>
-    </section>
-
-    <section id="sandbox">
-        <div id="button1" class="nunito-400">Primary</div>
-        <div id="button2" class="nunito-400">Secondary</div>
     </section>
 
     <script src="js/main.js"></script>
