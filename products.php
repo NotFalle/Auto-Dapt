@@ -55,11 +55,8 @@
 </head>
 
 <body>
-    <section class="product-banner">
-
-    </section>
-    <section class="products">
-
+    <section class="product">
+        
     </section>
 
     <script src="js/ping.js"></script>

@@ -68,7 +68,7 @@
                         </div>
                         <div id="sidenav-content">
                             <a href="contact.php" class="btn-animation">Kontakta</a>
-                            <a href="" class="btn-animation">Produkter</a>
+                            <a href="src/product/products.php" class="btn-animation">Produkter</a>
                             <a href="" class="btn-animation">Forum</a>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                         if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
                             echo "<a href='src/portal/login-portal.php' tabindex='0'>Logga in</a>";
                         } else {
-                            echo "<a href='members.php' tabindex='0'>Medlemssidan</i></a>";
+                            echo "<a href='/src/user/settings.php' tabindex='0'>Medlemssidan</i></a>";
                         }
                     ?>
                 </div>
@@ -113,7 +113,7 @@
         </div>
     </section>
 
-    <a href="members.php">Till medlemssidorna</a>
+    <a href="/src/user/settings.php">Till medlemssidorna</a>
 
     <section id="colorpalette">
         <div id="color1"></div>

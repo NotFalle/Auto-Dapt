@@ -1,6 +1,6 @@
 async function updatePanelStats() {
     try {
-        const response = await fetch("/stats.php", {
+        const response = await fetch("/src/auth/stats.php", {
             credentials: "same-origin"
         });
 

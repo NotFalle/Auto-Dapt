@@ -17,19 +17,6 @@
 
 ?>
 
-<!--
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Autodapt</title>
-</head>
-<body>
-    <a href="index.php">Tillbaka</a>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -38,7 +25,6 @@
 
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="/css/temp-admin.css">
 
     <title>Admin Panel</title>
 </head>
@@ -49,7 +35,7 @@
             <h2>Admin</h2>
             <a href="" class="active hover-animation">Dashboard</a>
             <a href="admin-panel-users.php" class="hover-animation">Användare</a>
-            <a href="admin-panel-settings.php" class="hover-animation">Inställningar</a>
+            <a href="/src/user/settings.php" class="hover-animation">Inställningar</a>
             <a href="/src/auth/logout.php" class="hover-animation">Logga ut</a>
         </div>
 
@@ -68,17 +54,17 @@
             <div class="card-container">
                 <div class="card">
                     <h3>Antal konton</h3>
-                    <span id="totalAccounts">0</span>
+                    <span id="totalAccounts"><?php echo $stats['total_accounts'];?></span>
                 </div>
 
                 <div class="card">
                     <h3>Aktiva konton</h3>
-                    <span id="activeLoggedInUsers">0</span>
+                    <span id="activeLoggedInUsers"><?php echo $stats['active_logged_in_users'];?></span>
                 </div>
 
                 <div class="card">
                     <h3>Aktiva besökare</h3>
-                    <span id="activeVisitors">0</span>
+                    <span id="activeVisitors"><?php echo $stats['active_visitors'];?></span>
                 </div>
             </div>
             
@@ -90,7 +76,6 @@
                             <th>Namn</th>
                             <th>Email</th>
                             <th>Roll</th>
-                            <th>Åtgärder</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -103,7 +88,6 @@
                                     echo "<td>" . htmlspecialchars($row['username']) . "</td>";
                                     echo "<td>" . htmlspecialchars($row['email']) . "</td>";
                                     echo "<td>" . htmlspecialchars($row['role']) . "</td>";
-                                    echo "<td><a class='btn btn-edit'>Redigera</a><a class='btn btn-delete'>Radera</a></td>";
                                 echo "</tr>";
 
                             } 

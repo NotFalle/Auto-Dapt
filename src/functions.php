@@ -28,6 +28,7 @@
 
         // Skickar tillbaka databas uppkopplingen
         return $db;
+        
     }
 
     // redirectWithMessage($url, $message)
@@ -55,7 +56,7 @@
 
     }
 
-    // getUserbyId($username)
+    // getUserbyId($id)
     function getUserbyId($id) {
 
         // Hämta en databasuppkoppling
@@ -65,7 +66,7 @@
         $statement = $db->prepare("
             SELECT *
             FROM `autodapt-userdatabase`
-            WHERE id = ?
+            WHERE user_id = ?
             LIMIT 1
         ");
         $statement->bind_param('i', $id);
@@ -98,7 +99,7 @@
             WHERE username = ?
             LIMIT 1
         ");
-        $statement->bind_param('i', $username);
+        $statement->bind_param('s', $username);
         $statement->execute(); // Skickar förfrågan
 
         // Hämtar resultatet
@@ -130,6 +131,39 @@
             WHERE av.visitor_id IS NOT NULL
             AND av.last_seen >= NOW() - INTERVAL 3 MINUTE
             ORDER BY av.last_seen DESC
+        ");
+
+        // Skicka SQL-förfrågan
+        $statement->execute();
+
+        // Spara resultatet
+        $result = $statement->get_result();
+
+        // Skicka resultatet
+        return $result;
+
+    }
+
+    // getAllUsersList()
+    function getAllUsersList() {
+
+        // Hämta en databas uppkoppling
+        $db = connectToDb();
+
+        // Förbered en SQL-förfrågan
+        $statement = $db->prepare("
+            SELECT 
+                user_id,
+                username,
+                email,
+                role,
+                last_login,
+                created_at,
+                last_seen
+            FROM `autodapt-userdatabase`
+            ORDER BY 
+                last_seen IS NULL,
+                last_seen DESC
         ");
 
         // Skicka SQL-förfrågan

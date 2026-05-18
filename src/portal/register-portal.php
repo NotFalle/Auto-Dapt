@@ -67,17 +67,17 @@
                 <p>Registrera dig för att skapa ett konto.</p>
                 <div class="form-group">
                     <div class="form-label">
-                        <label for="uname">Användarnamn</label>
+                        <label for="uname">Användarnamn<span class="req">*</span></label>
                     </div>
                     <div class="form-input">
                         <i class="fa-sharp fa-light fa-circle-user left"></i>
-                        <input class="left-input" type="text" name="username" id="uname" placeholder="Exempel123" required>
+                        <input class="left-input" type="text" minlength="3" maxlength="20" name="username" id="uname" placeholder="Exempel123" required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-label">
-                        <label for="mail">E-postadress</label>
+                        <label for="mail">E-postadress<span class="req">*</span></label>
                     </div>
                     <div class="form-input">
                         <i class="fa-sharp fa-light fa-envelope left"></i>
@@ -87,22 +87,22 @@
 
                 <div class="form-group">
                     <div class="form-label">
-                        <label for="pword">Lösenord</label>
+                        <label for="pword">Lösenord<span class="req">*</span></label>
                     </div>
                     <div class="form-input">
                         <i class="fa-sharp fa-light fa-key left"></i>
-                        <input class="both-input" type="password" name="password" id="pword" placeholder="Avancerad-GaFF_El12!" required>
+                        <input class="both-input" type="password" minlength="12" maxlength="250" name="password" id="pword" placeholder="Avancerad-GaFF_El12!" required>
                         <i class="fa-sharp fa-light fa-eye-slash right toggle-password"></i>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-label">
-                        <label for="pword2">Upprepa lösenord</label>
+                        <label for="pword2">Upprepa lösenord<span class="req">*</span></label>
                     </div>
                     <div class="form-input">
                         <i class="fa-sharp fa-light fa-key left"></i>
-                        <input class="both-input" type="password" name="password_confirm" id="pword2" placeholder="Hemligt lösenord" required>
+                        <input class="both-input" type="password" minlength="12" maxlength="250" name="password_confirm" id="pword2" placeholder="Hemligt lösenord" required>
                         <i class="fa-sharp fa-light fa-eye-slash right toggle-password"></i>
                     </div>
                 </div>

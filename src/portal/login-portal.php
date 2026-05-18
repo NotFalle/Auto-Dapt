@@ -60,6 +60,7 @@
         <a href="/index.php" class="btn-info form-nav-btn btn-animation">Tillbaka</a>
     </section>
     <section class="form">
+
         <form action="/src/auth/login.php" method="POST">
             <div class="form-hdr">
                 <h1 class="poppins-700">Logga in</h1>
@@ -68,22 +69,22 @@
                 <p>Logga in på ditt konto för att fortsätta.</p>
                 <div class="form-group">
                     <div class="form-label">
-                        <label for="uname">Användarnamn</label>
+                        <label for="uname">Användarnamn<span class="req">*</span></label>
                     </div>
                     <div class="form-input">
                         <i class="fa-sharp fa-light fa-circle-user left"></i>
-                        <input class="left-input" type="text" name="username" id="uname" placeholder="Mystisk Användare" required>
+                        <input class="left-input" type="text" minlength="3" maxlength="20" name="username" id="uname" placeholder="Mystisk Användare" required>
                     </div>
                     
                 </div>
 
                 <div class="form-group">
                     <div class="form-label">
-                        <label for="pword">Lösenord</label>
+                        <label for="pword">Lösenord<span class="req">*</span></label>
                     </div>
                     <div class="form-input">
                         <i class="fa-sharp fa-light fa-key left"></i>
-                        <input class="both-input" type="password" name="password" id="pword" placeholder="Klurigt Lösenord" required>
+                        <input class="both-input" type="password" minlength="12" maxlength="250" name="password" id="pword" placeholder="Klurigt Lösenord" required>
                         <i class="fa-sharp fa-light fa-eye-slash right toggle-password"></i>
                     </div>
                 </div>

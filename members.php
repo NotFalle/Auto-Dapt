@@ -15,6 +15,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
     <title>Medlemmar</title>
 </head>
 <style> /* ENDAST TEMPORÄR  -  TA BORT SNARAST! */
@@ -36,10 +40,10 @@ body {
     echo "<h2>Hej <i>" . $_SESSION['username'] . "</i>!</h2>";
     
     if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"){
-        echo "<h2>Status: <i style='color: #d4bd0e;'>" . $_SESSION['role'] . "</i></h2>";
+        echo "<h2>Status: <i class='admin'>" . $_SESSION['role'] . "</i></h2>";
         echo "<a href='src/admin/admin-panel.php'>Admin panelen</a>";
     } else {
-        echo "<h2>Status: <i style='color: #1c8525;'>" . $_SESSION['role'] . "</i></h2>";
+        echo "<h2>Status: <i class='user'>" . $_SESSION['role'] . "</i></h2>";
     }
 
     ?>
@@ -47,7 +51,8 @@ body {
     <br>
     <br>
     <a href="index.php">Tillbaka</a>
-    <a href="logout.php">Logga ut</a>
+    <a href="src/user/settings.php">Inställningar</a>
+    <a href="src/auth/logout.php">Logga ut</a>
     
     <script src="js/ping.js"></script>
 </body>
