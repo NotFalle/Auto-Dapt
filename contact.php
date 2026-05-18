@@ -1,5 +1,5 @@
 <?php
-    require_once "functions.php";
+    require_once "src/functions.php";
     trackVisitor();
 ?>
 
