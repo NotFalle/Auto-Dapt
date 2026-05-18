@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    require_once __DIR__ . "/../functions.php";
+    trackVisitor();
 ?>
 
 <!DOCTYPE html>
@@ -49,16 +50,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Load CSS files and set title -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
     <title>Registrera - Auto-Dapt</title>
 </head>
 <body>
     <section class="form-nav">
-        <a href="index.php" class="btn-info form-nav-btn btn-animation">Tillbaka</a>
+        <a href="/index.php" class="btn-info form-nav-btn btn-animation">Tillbaka</a>
     </section>
     <section class="form">
-        <form action="register.php" method="POST">
+        <form action="/src/auth/register.php" method="POST">
             <div class="form-hdr">
                 <h1 class="poppins-700">Registrera</h1>
             </div>
@@ -66,17 +67,17 @@
                 <p>Registrera dig för att skapa ett konto.</p>
                 <div class="form-group">
                     <div class="form-label">
-                        <label for="uname">Användarnamn</label>
+                        <label for="uname">Användarnamn<span class="req">*</span></label>
                     </div>
                     <div class="form-input">
                         <i class="fa-sharp fa-light fa-circle-user left"></i>
-                        <input class="left-input" type="text" name="username" id="uname" placeholder="Exempel123" required>
+                        <input class="left-input" type="text" minlength="3" maxlength="20" name="username" id="uname" placeholder="Exempel123" required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-label">
-                        <label for="mail">E-postadress</label>
+                        <label for="mail">E-postadress<span class="req">*</span></label>
                     </div>
                     <div class="form-input">
                         <i class="fa-sharp fa-light fa-envelope left"></i>
@@ -86,22 +87,22 @@
 
                 <div class="form-group">
                     <div class="form-label">
-                        <label for="pword">Lösenord</label>
+                        <label for="pword">Lösenord<span class="req">*</span></label>
                     </div>
                     <div class="form-input">
                         <i class="fa-sharp fa-light fa-key left"></i>
-                        <input class="both-input" type="password" name="password" id="pword" placeholder="Avancerad-GaFF_El12!" required>
+                        <input class="both-input" type="password" minlength="12" maxlength="250" name="password" id="pword" placeholder="Avancerad-GaFF_El12!" required>
                         <i class="fa-sharp fa-light fa-eye-slash right toggle-password"></i>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form-label">
-                        <label for="pword2">Upprepa lösenord</label>
+                        <label for="pword2">Upprepa lösenord<span class="req">*</span></label>
                     </div>
                     <div class="form-input">
                         <i class="fa-sharp fa-light fa-key left"></i>
-                        <input class="both-input" type="password" name="password_confirm" id="pword2" placeholder="Hemligt lösenord" required>
+                        <input class="both-input" type="password" minlength="12" maxlength="250" name="password_confirm" id="pword2" placeholder="Hemligt lösenord" required>
                         <i class="fa-sharp fa-light fa-eye-slash right toggle-password"></i>
                     </div>
                 </div>
@@ -121,6 +122,10 @@
                 </div>
 
                 <?php
+                    if(isset($_GET['error']) && $_GET['error'] == "email"){
+                        echo "<p class='error'>E-postadressen finns redan.</p>";
+                    }
+
                     if(isset($_GET['error']) && $_GET['error'] == "password"){
                         echo "<p class='error'>Lösenorden matchar inte.</p>";
                     }
@@ -133,11 +138,12 @@
         </form>
     </section>
 
-    <script src="js/password-checker.js"></script>
+    <script src="/js/password-checker.js"></script>
+    <script src="/js/ping.js"></script>
 </body>
 <footer>
     <p id="version"></p>
-    <script src="js/version.js"></script>
+    <script src="/js/version.js"></script>
 </footer>
 
 </html>

@@ -1,12 +1,9 @@
-Innan commit:
+
 
 - Uppdatera versionen i "js/version.js"
 - Kommentera nya versionen ovanför commit knappen
 
+- Implementera så mycket css kod som möjligt i style.css - ta bort alla temp.css filer
+
 - Kontrollera kod.
 
-kolla så att man kan tabba - inte kunna tabba längre ner när menyn öppen
-för stora bilder?
-
-
-Commit! 

@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    require_once "src/functions.php";
+    trackVisitor();
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +82,14 @@
                     <h1 class="poppins-700">Auto-Dapt</h1>
                 </div>
                 <div class="hdr-boxes">
-                    <a href="login-portal.php" tabindex="0">Logga in <i class="fa-solid fa-circle-user"></i></a>
+                    <?php
+                        // Om inte session-variabel finns eller inte är TRUE
+                        if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
+                            echo "<a href='src/portal/login-portal.php' tabindex='0'>Logga in</a>";
+                        } else {
+                            echo "<a href='/src/user/settings.php' tabindex='0'>Medlemssidan</i></a>";
+                        }
+                    ?>
                 </div>
             </div>
         </nav>
@@ -105,7 +113,7 @@
         </div>
     </section>
 
-    <a href="members.php">Till medlemssidorna</a>
+    <a href="/src/user/settings.php">Till medlemssidorna</a>
 
     <section id="colorpalette">
         <div id="color1"></div>
@@ -119,9 +127,8 @@
         <div id="button2" class="nunito-400">Secondary</div>
     </section>
 
-    <a href="contact.php">Teleport</a> <!-- Temporary link -->
-
     <script src="js/main.js"></script>
+    <script src="js/ping.js"></script>
 </body>
 <footer>
     <p id="version"></p>
