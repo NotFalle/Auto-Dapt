@@ -373,5 +373,58 @@
         return $stats;
     }
 
+    // getComments()
+    function getComments() {
 
+        // Hämta databasuppkoppling
+        $db = connectToDb();
+
+        // Förbered SQL-fråga
+        $statement = $db->prepare("
+            SELECT 
+                c.message,
+                c.`time-sent`,
+                u.user_id,
+                u.username,
+                u.role,
+                u.`user-profile-picture`
+            FROM `autodapt-comments` c
+            JOIN `autodapt-userdatabase` u ON c.`user-id` = u.user_id
+            ORDER BY c.`time-sent` DESC
+        ");
+
+        // Kör SQL-frågan
+        $statement->execute();
+
+        // Hämta resultatet
+        $result = $statement->get_result();
+
+        // Skicka tillbaka resultatet
+        return $result;
+
+    }
+
+    // createComment($userId, $username, $message)
+    function createComment($userId, $username, $message) {
+
+        // Hämta databasuppkoppling
+        $db = connectToDb();
+
+        // Förbered SQL-fråga
+        $statement = $db->prepare("
+            INSERT INTO `autodapt-comments` (`user-id`, username, message)
+            VALUES (?, ?, ?)
+        ");
+
+        // Binder värden
+        $statement->bind_param("iss", $userId, $username, $message);
+
+        // Kör SQL-frågan
+        $statement->execute();
+
+        // Stänger statement och databas
+        $statement->close();
+        $db->close();
+
+    }
 ?>

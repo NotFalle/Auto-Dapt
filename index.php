@@ -86,7 +86,7 @@
                         if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
                             echo "<a href='src/portal/login-portal.php' tabindex='0'>Logga in</a>";
                         } else {
-                            echo "<a href='/src/user/settings.php' tabindex='0'>Medlemssidan</i></a>";
+                            echo "<a href='/src/user/settings.php' tabindex='0'>Inställningar</i></a>";
                         }
                     ?>
                 </div>

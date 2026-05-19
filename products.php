@@ -1,5 +1,23 @@
 <?php
-    session_start();
+    require_once "src/functions.php";
+    trackVisitor();
+
+    $user = null;
+    $profilePicture = "";
+    $username = "";
+    $role = "";
+
+    if (isLoggedIn()) {
+        $user = getUserbyId($_SESSION["user_id"]);
+
+        if ($user) {
+            $profilePicture = $user["user-profile-picture"] ?? "";
+            $username = $user["username"];
+            $role = $user["role"];
+        }
+    }
+
+    $comments = getComments();
 ?>
 
 <!DOCTYPE html>
@@ -178,17 +196,166 @@
                         <li>Användningsområde: Inomhus</li>
                     </ul>
                 </div>
-            <!-- All yours Isac :)-->
-                <div class="selection-content" id="reviews">
-                    <hr>
-                    <p> 4.9/5 baserat på 154 reviews</p>
-                </div>
+
+<div class="selection-content" id="reviews">
+
+    <hr>
+
+    <div class="review-container">
+
+        <div class="messages-body">
+
+            <?php if (isLoggedIn()): ?>
+
+                <form action="src/auth/message.php" method="post">
+
+                    <div class="message-hdr">
+                        <label for="msg">Skicka ett meddelande:</label>
+                    </div>
+
+                    <div class="message-body">
+
+                        <input
+                            type="text"
+                            name="message"
+                            id="msg"
+                            maxlength="255"
+                            required
+                        >
+
+                        <button type="submit" class="no-border icon-hover-button">
+                            <i
+                                id="msg-btn"
+                                class="fa-sharp fa-light fa-comment-arrow-up hover-icon"
+                                data-normal="fa-comment-arrow-up"
+                                data-hover="fa-comment-arrow-up-right"
+                            ></i>
+                        </button>
+
+                    </div>
+
+                </form>
+
+            <?php else: ?>
+
+                <p class="product-description-text">
+                    Logga in för att skicka ett meddelande.
+                </p>
+
+            <?php endif; ?>
+
+            <div class="messages-container">
+
+                <?php if ($comments->num_rows > 0): ?>
+
+                    <?php while ($comment = $comments->fetch_assoc()): ?>
+
+                        <?php
+
+                            $commentUsername = $comment["username"];
+                            $commentRole = $comment["role"];
+                            $commentMessage = $comment["message"];
+                            $commentProfilePicture = $comment["user-profile-picture"] ?? "";
+
+                            $commentTime = $comment["time-sent"];
+
+                            $date = date("d-m-y", strtotime($commentTime));
+                            $time = date("H:i", strtotime($commentTime));
+
+                        ?>
+
+                        <div class="message">
+
+                            <div class="message-hdr">
+
+                                <?php if (!empty($commentProfilePicture)): ?>
+
+                                    <img
+                                        src="/src/image/uploads/<?php echo htmlspecialchars($commentProfilePicture); ?>"
+                                        id="pfpPreview"
+                                        alt="Profilbild"
+                                    >
+
+                                <?php else: ?>
+
+                                    <div class="default-pfp" id="pfpPreview">
+                                        <i class="fa-sharp fa-light fa-circle-user big-default-pfp"></i>
+                                    </div>
+
+                                <?php endif; ?>
+
+                                <div class="message-hdr-desc">
+
+                                    <?php
+
+                                        if ($commentRole === "admin") {
+
+                                            echo "<p>" . htmlspecialchars($commentUsername) . " <span class='admin'>(admin)</span></p>";
+
+                                        } elseif ($commentRole === "user") {
+
+                                            echo "<p>" . htmlspecialchars($commentUsername) . " <span class='member'>(medlem)</span></p>";
+
+                                        } elseif ($commentRole === "og") {
+
+                                            echo "<p>" . htmlspecialchars($commentUsername) . " <span class='og'>(OG)</span></p>";
+
+                                        } else {
+
+                                            echo "<p>" . htmlspecialchars($commentUsername) . "</p>";
+
+                                        }
+
+                                        echo "<p class='small'>Skickat: " . htmlspecialchars($time) . "</p>";
+
+                                    ?>
+
+                                </div>
+
+                                <div class="message-hdr-time">
+
+                                    <?php
+                                        echo "<p class='msg-right'>" . htmlspecialchars($date) . "</p>";
+                                    ?>
+
+                                </div>
+
+                            </div>
+
+                            <div class="message-content">
+
+                                <p>
+                                    <?php echo htmlspecialchars($commentMessage); ?>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    <?php endwhile; ?>
+
+                <?php else: ?>
+
+                    <p class="product-description-text">
+                        Inga meddelanden har skickats ännu.
+                    </p>
+
+                <?php endif; ?>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
             </div>
 
         </section>
   </div>
-           
+    
+    <script src="js/icon-hover.js"></script>
     <script src="js/main.js"></script>
 </body>
 

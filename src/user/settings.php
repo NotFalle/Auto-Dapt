@@ -1,23 +1,24 @@
 <?php
-require_once __DIR__ . "/../functions.php";
+    require_once __DIR__ . "/../functions.php";
+    trackVisitor();
+    
+    if (!isLoggedIn()) {
+        header("Location: /index.php");
+        exit;
+    }
 
-if (!isLoggedIn()) {
-    header("Location: /index.php");
-    exit;
-}
+    $user = getUserbyId($_SESSION["user_id"]);
 
-$user = getUserbyId($_SESSION["user_id"]);
+    if (!$user) {
+        header("Location: /index.php");
+        exit;
+    }
 
-if (!$user) {
-    header("Location: /index.php");
-    exit;
-}
-
-$profilePicture = $user["user-profile-picture"] ?? "";
-$username = $user["username"];
-$created = date("d-m-Y", strtotime($user["created_at"]));
-$email = $user["email"];
-$role = $user["role"];
+    $profilePicture = $user["user-profile-picture"] ?? "";
+    $username = $user["username"];
+    $created = date("d-m-Y", strtotime($user["created_at"]));
+    $email = $user["email"];
+    $role = $user["role"];
 
 
 ?>
@@ -153,12 +154,12 @@ $role = $user["role"];
                 </div>
                 <?php
 
-                    if ($role = "admin") {
+                    if ($role == "admin") {
 
                         echo "<i class='settings-status'>Du är <i class='admin'>admin</i> och ditt konto skapades: " . $created . "</i>";
                         echo "<div class='settings-btm'><a href='/src/admin/admin-panel.php' class='btn-panel btn-animation'>Gå till admin panelen</a></div>";
 
-                    } elseif ($role = "user") {
+                    } elseif ($role == "user") {
                         
                         echo "<i class='settings-status'>Du har ett <i class='user'>användarkonto</i> och ditt konto skapades: " . $created . "</i>";
 
