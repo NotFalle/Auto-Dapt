@@ -1,3 +1,15 @@
+function openNav() {
+  const sidenav = document.getElementById("sidenav");
+
+  if (window.matchMedia("(max-width: 48rem)").matches) {
+    sidenav.style.width = "100%";
+  } else {
+    sidenav.style.width = "20rem";
+  }
+
+  document.body.classList.add('no-scroll');
+  document.documentElement.classList.add('sidebar-open');
+}
 
 
 function openNav() {
@@ -58,6 +70,13 @@ tabs.forEach(key => {
     });
 });
 
+
+
+
+
+
+
+console.log("main.js file loaded");
 
 
 

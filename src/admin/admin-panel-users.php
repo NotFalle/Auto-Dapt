@@ -25,8 +25,6 @@
 
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="/css/temp-admin.css">
-
     <title>Användare - Admin Panel</title>
 </head>
 <body>
@@ -69,7 +67,7 @@
                 </div>
             </div>
             
-            <div class="table">
+            <div class="table" id="users-table">
                 <table>
                     <thead>
                         <tr>

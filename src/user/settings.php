@@ -78,7 +78,7 @@
 </head>
 <body>
     <section class="form-nav">
-        <a href="/index.php" class="btn-info form-nav-btn btn-animation">Tillbaka</a>
+        <a href="/index.php" class="btn-info form-nav-btn btn-animation">Gå Hem</a>
     </section>
     <section class="settings">
         <div class="settings-container">

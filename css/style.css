@@ -164,6 +164,7 @@ nav h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 4rem;
 }
 
 .cnt-flex-left {
@@ -301,7 +302,11 @@ nav h1 {
 body.no-scroll {
     overflow: hidden;
 }
-
+@media(max-width:48rem){
+    .container-flexbox {
+        flex-direction: column;
+    }
+}
 
 /* ######################################## */
 /* ############## Contact ################ */
@@ -718,14 +723,6 @@ margin: auto;
     width:100%;
     border-radius:1.25rem;
 }
-
-@media(max-width:62.5rem){
-#product-page-main{
-    flex-direction:column;
-}
-}
-
-
 #product-selection-menu .selection-choice {
     cursor: pointer;
     color: #737373;
@@ -764,7 +761,6 @@ margin: auto;
 }
 
 .review-container {
-    min-width: 50rem;
     min-height: 40rem;
     max-width: 80rem;
 
@@ -777,23 +773,19 @@ margin: auto;
 }
 
 .messages-body {
-    
     background-color: #025293;
     margin-top: 1rem;
     border-radius: 1rem;
     padding: 2rem;
     max-width: 58rem;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-
 }
 
 .messages-body form {
-    width: 52.5rem;
-    max-width: fit-content;
+    max-width: 52.5rem;
     background-color: #014175;
     padding: 2rem;
     border-radius: 1rem;
@@ -868,7 +860,7 @@ margin: auto;
 }
 
 .messages-container {
-    width: 52.5rem;
+    max-width: 52.5rem;
     background-color: #014175;
     padding: 2rem;
     border-radius: 1rem;
@@ -992,6 +984,23 @@ margin: auto;
 
 .selection-choice.active{
     border-bottom:0.2rem;
+}
+@media (max-width:70rem){
+    #product-page-main{
+        flex-direction: column;
+    }
+    .message-body{
+        width:100%;
+    }
+
+    .message-body input{
+        width: 100%;
+    }
+
+    .messages-container{
+        width:100%;
+        padding:1rem;
+    }
 }
 
 /* ################################################## */
@@ -1178,6 +1187,11 @@ margin: auto;
         align-items: center;
         justify-content: center;
     }
+    
+    .settings-pfp-desc input {
+        width: 100%;
+        min-width: 0;
+    }
 
 }
 
@@ -1188,33 +1202,26 @@ margin: auto;
 .settings-modal {
     position: fixed;
     inset: 0;
-
     display: none;
     align-items: center;
     justify-content: center;
-
     padding: 1rem;
-
     background-color: rgba(0, 0, 0, 0.75);
-
     z-index: 9999;
 }
 
 .settings-modal-content {
     max-width: 80rem;
-
+    width: 100%;
     padding: 1.5rem;
-
     background-color: var(--primary-background, white);
-
     border-radius: 0.5rem;
-
     box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.35);
+    
 }
 
 .settings-crop-image {
     display: block;
-
     min-width: 60rem;
     max-width: 70rem;
     max-height: 20rem;
@@ -1225,7 +1232,6 @@ margin: auto;
 .settings-crop-buttons {
     display: flex;
     gap: 1rem;
-
     margin-top: 1.5rem;
 }
 
@@ -1295,6 +1301,8 @@ margin: auto;
 .panel-layout {
     flex: 1;
     padding: 0 1.25rem;
+    min-width: 0;
+
 }
 
 .header {
@@ -1340,7 +1348,15 @@ margin: auto;
     width: 100%;
     border-collapse: collapse;
 }
+#users-table{
+    width: 100%;
+    overflow-x: auto;
+}
 
+#users-table table{
+    min-width: 60rem;
+    width: 100%;
+}
 .table th, .table td {
     padding: 1rem;
     text-align: left;
@@ -1391,7 +1407,43 @@ margin: auto;
     text-align: center;
 }
 
+@media (max-width: 45rem){
 
+    #admin-panel-body{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .sidebar{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .panel-layout{
+        width: 100%;
+        padding: 1rem;
+    }
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .table{
+        overflow-x: auto;
+    }
+
+    .table table{
+        min-width: 40rem;
+    }
+
+}
 
 /* ################################################## */
 /* ############## Login and Register ################ */
