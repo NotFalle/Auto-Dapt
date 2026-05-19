@@ -123,5 +123,16 @@
     </section>
 
     <script src="/js/admin-panel.js"></script>
+    
+    <footer>
+        <div class="footer">
+        <h1>Auto-Dapt</h1>
+        <span>Kontaktuppgifter:</span>
+        </div>
+        <div class="footer-information">
+        <span>Gmail:</span><span>Auto-Dapt@gmail.com </span>
+        <Span>Telefonnummer:</Span><span>07 123 45 67</span>
+        </div>
+    </footer>
 </body>
 </html>

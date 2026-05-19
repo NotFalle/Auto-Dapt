@@ -102,7 +102,7 @@
                             <a href="kontakt.php" class="btn-animation">kontakt</a>
                         </div>
                     </div>
-                    <button onclick="openNav()" tabindex="0" id="menu-btn">
+                    <button onclick="openNav()" tabindex="0" id="menu-btn" title="Öppna meny">
                         <i class="fa-notdog fa-solid fa-bars button-action menusize"></i>
                     </button>  
                 </div>
@@ -390,6 +390,17 @@
     
     <script src="js/icon-hover.js"></script>
     <script src="js/main.js"></script>
+
+    <footer>
+        <div class="footer">
+        <h1>Auto-Dapt</h1>
+        <span>Kontaktuppgifter:</span>
+        </div>
+        <div class="footer-information">
+        <span>Gmail:</span><span>Auto-Dapt@gmail.com </span>
+        <Span>Telefonnummer:</Span><span>07 123 45 67</span>
+        </div>
+    </footer>
 </body>
 
 </html>
