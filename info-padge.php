@@ -1,10 +1,11 @@
 <?php
-    session_start();
+    require_once "src/functions.php";
+    trackVisitor();
 ?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Load Font Awesome -->
@@ -49,10 +50,7 @@
     <!-- Load CSS files and set title -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informations-Sida</title>
+    <title>Information - Autodapt</title>
 </head>
 <body>
     <section class="page-banner">
@@ -66,9 +64,8 @@
                             onclick="closeNav()">&times;</a>
                         </div>
                         <div id="sidenav-content">
+                            <a href="index.php" class="btn-animation">Hem</a>
                             <a href="contact.php" class="btn-animation">Kontakta</a>
-                            <a href="products.php" class="btn-animation">Produkter</a>
-                            <a href="" class="btn-animation">Forum</a>
                         </div>
                     </div>
                     <button onclick="openNav()" tabindex="0" id="menu-btn">

@@ -1,10 +1,12 @@
 <?php
-    session_start();
+    require_once "src/functions.php";
+    trackVisitor();
 ?>
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Load Font Awesome -->
@@ -49,9 +51,7 @@
     <!-- Load CSS files and set title -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Företag-Kontakt</title>
+    <title>Företags kontakt - Autodapt</title>
     
 </head>
 <body>
@@ -68,7 +68,6 @@
                         <div id="sidenav-content">
                             <a href="index.php" class="btn-animation">Hem</a>
                             <a href="products.php" class="btn-animation">Produkter</a>
-                            <a href="" class="btn-animation">Forum</a>
                         </div>
                     </div>
                     <button onclick="openNav()" tabindex="0" id="menu-btn">

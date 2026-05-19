@@ -5,7 +5,6 @@
 
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +51,7 @@
     <!-- Load CSS files and set title -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <title>Kontakt - Auto-Dapt</title>
+    <title>Kontakt - Autodapt</title>
 </head>
 
 <body>
@@ -69,7 +68,6 @@
                         <div id="sidenav-content">
                             <a href="index.php" class="btn-animation">Hem</a>
                             <a href="products.php" class="btn-animation">Produkter</a>
-                            <a href="" class="btn-animation">Forum</a>
                         </div>
                     </div>
                     <button onclick="openNav()" tabindex="0" id="menu-btn">
