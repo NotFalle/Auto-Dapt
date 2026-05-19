@@ -67,12 +67,12 @@
                             onclick="closeNav()">&times;</a>
                         </div>
                         <div id="sidenav-content">
-                            <a href="contact.php" class="btn-animation">Kontakt</a>
-                            <a href="products.php" class="btn-animation">Produkter</a>
+                            <a href="kontakt.php" class="btn-animation">Kontakt</a>
+                            <a href="produkter.php" class="btn-animation">Produkter</a>
                         </div>
                     </div>
                     <button onclick="openNav()" tabindex="0" id="menu-btn">
-                        <i class="fa-sharp fa-light fa-bars button-action menusize"></i>
+                        <i class="fa-notdog fa-solid fa-bars button-action menusize"></i>
                     </button>  
                 </div>
                 <div id="sidenav-overlay"></div>   
@@ -84,9 +84,9 @@
                     <?php
                         // Om inte session-variabel finns eller inte är TRUE
                         if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
-                            echo "<a href='src/portal/login-portal.php' tabindex='0'>Logga in</a>";
+                            echo "<a href='src/portal/inloggningsportal.php' tabindex='0' class='portal-loggin-settings'>Logga in</a>";
                         } else {
-                            echo "<a href='/src/user/settings.php' tabindex='0'>Inställningar</i></a>";
+                            echo "<a  href='/src/user/installningar.php' tabindex='0' class='portal-loggin-settings'>Inställningar</i></a>";
                         }
                     ?>
                 </div>
@@ -100,8 +100,8 @@
                         <h1 class="poppins-800 text-primary-color">Spara upp till 30% elektricitet!</h1>
                         <p class="text-primary-color">Vi siktar mot en energisnål framtid, en framtid utan energitjuvar. Vårt mål är att skapa lösningar för billigare energi och mindre miljöpåverkan.</p>
                         <div class="button-row">
-                            <a class="btn-CTA btn-animation" href="products.php">Köp nu</a>
-                            <a class="btn-info btn-animation" href="info-padge.php">Så funkar det</a>
+                            <a class="btn-CTA btn-animation" href="produkter.php">Köp nu</a>
+                            <a class="btn-info btn-animation" href="informationssida.php">Så funkar det</a>
                         </div>
                     </div>
                     <div class="cnt-flex-right">

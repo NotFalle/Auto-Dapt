@@ -1,10 +1,11 @@
 <?php
-    require_once "src/functions.php";
+    require_once __DIR__ . "/../functions.php";
     trackVisitor();
 ?>
 
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,77 +50,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Load CSS files and set title -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <title>Kontakt - Autodapt</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <title>Logga in - Auto-Dapt</title>
 </head>
 
 <body>
-    <section class="page-banner">
-        <nav>
-            <div class="nav-container">
-           
-                <div class="hdr-boxes">
-                    <div id= "sidenav" class="sidenav">
-                        <div id="sidenav-hdr">
-                            <a href="javascript:void(0)" class="closebutton"
-                            onclick="closeNav()">&times;</a>
-                        </div>
-                        <div id="sidenav-content">
-                            <a href="index.php" class="btn-animation">Hem</a>
-                            <a href="products.php" class="btn-animation">Produkter</a>
-                        </div>
-                    </div>
-                    <button onclick="openNav()" tabindex="0" id="menu-btn">
-                        <i class="fa-notdog fa-solid fa-bars button-action menusize"></i>
-                    </button>  
-                </div>
-                <div id="sidenav-overlay"></div> 
-
-                 <div id="brand">
-                    <h1 class="poppins-700">Auto-Dapt</h1>
-                </div>
-                <div class="hdr-boxes">
-                    <?php
-                        // Om inte session-variabel finns eller inte är TRUE
-                        if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
-                            echo "<a href='src/portal/login-portal.php' tabindex='0'>Logga in</a>";
-                        } else {
-                            echo "<a href='/src/user/settings.php' tabindex='0'>Inställningar</i></a>";
-                        }
-                    ?>                </div>
-            </div>
-        </nav>
-        <div id="contactpadge-container">
-            <h1 id="contact-h1"class="poppins-800 text-primary-color">Använd Auto-Dapt idag och spara upp till 30% på el räkningen utan att lyfta ett finger!</h1>
-            <p id="contact-info"class="text-primary-color">Har du frågor eller funderingar över våra smarta adaptrar? Tveka inte att gå in och läsa våra FAQ och har du några övriga frågor så finns vi tillägänliga via telefon <strong>9-17 </strong> på vardagar eller skicka ett majl och få svar inom <strong>48</strong> timmar</p>
-            <div id="contact-container">
-                <div class="contact-flexbox">
-                    <h2>Våra kontakt uppgifter:</h2>
-                    <button class="contact-button"><p class="contact-contactinfo text-primary-color"><b>Ring oss på: 46-70 123 45 67</b></p></button>
-                     <button class="contact-button" onclick="location.href='https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjgCQbTSxKfVdHqRQGJCJbdMWvtvhcwpMdJLlfvlMKMBTqbCHLzlWQtTjRzxSgzmCwGbbg'"><p class="contact-contactinfo"class="text-primary-color"><b>Skirv mail till: Auto-Dapt@gmail.com</b></p></button>
-                </div>
-               
-                <div class="contact-flexbox">
-                    <h2>Intresserad av att sammarbeta?</h2>
-                    <button class="contact-button" onclick="location.href='företag-contact.php'">
-                        <p id="contact-button-text"class="text-primary-color"><b>Kontakt oss</b></p>
-                    </button>
-                </div>
-
-                
-            </div>
-
-        </div>
-           
-        <div class="container">
-            </div>    
-             
-    
-    
-        </div>
+    <section class="form-nav">
+        <a href="/index.php" class="btn-info form-nav-btn btn-animation">Tillbaka</a>
     </section>
-    <script src="js/main.js"></script>
+    <section class="form">
+
+        <form action="/src/auth/login.php" method="POST">
+            <div class="form-hdr">
+                <h1 class="poppins-700">Logga in</h1>
+            </div>
+            <div class="form-body">
+                <p>Logga in på ditt konto för att fortsätta.</p>
+                <div class="form-group">
+                    <div class="form-label">
+                        <label for="uname">Användarnamn<span class="req">*</span></label>
+                    </div>
+                    <div class="form-input">
+                        <i class="fa-sharp fa-light fa-circle-user left"></i>
+                        <input class="left-input" type="text" minlength="3" maxlength="20" name="username" id="uname" placeholder="Mystisk Användare" required>
+                    </div>
+                    
+                </div>
+
+                <div class="form-group">
+                    <div class="form-label">
+                        <label for="pword">Lösenord<span class="req">*</span></label>
+                    </div>
+                    <div class="form-input">
+                        <i class="fa-sharp fa-light fa-key left"></i>
+                        <input class="both-input" type="password" minlength="12" maxlength="250" name="password" id="pword" placeholder="Klurigt Lösenord" required>
+                        <i class="fa-sharp fa-light fa-eye-slash right toggle-password"></i>
+                    </div>
+                </div>
+            </div>
+            <?php
+                if(isset($_GET['error']) && $_GET['error'] == "login"){
+                    echo "<p class='error'><i class='fa-sharp fa-light fa-circle-exclamation'></i> Fel användarnamn eller lösenord.</p>";
+                }
+            ?>
+            <div class="form-btm">
+                <button type="submit" class="no-border btn-CTA btn-animation">Logga in</button>
+                <a href="registrerings-portal.php" class="btn-info btn-animation">Registrera</a>
+            </div>
+        </form>
+    </section>
+
+    <script src="/js/password-toggle-login.js"></script>
+    <script src="/js/ping.js"></script>
 </body>
+<footer>
+    <p id="version"></p>
+    <script src="/js/version.js"></script>
+</footer>
 
 </html>

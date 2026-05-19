@@ -67,7 +67,7 @@
                         </div>
                         <div id="sidenav-content">
                             <a href="index.php" class="btn-animation">Hem</a>
-                            <a href="products.php" class="btn-animation">Produkter</a>
+                            <a href="produkter.php" class="btn-animation">Produkter</a>
                         </div>
                     </div>
                     <button onclick="openNav()" tabindex="0" id="menu-btn">
@@ -83,9 +83,9 @@
                     <?php
                         // Om inte session-variabel finns eller inte är TRUE
                         if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
-                            echo "<a href='src/portal/login-portal.php' tabindex='0'>Logga in</a>";
+                            echo "<a href='src/portal/inloggningsportal.php' tabindex='0' class='portal-loggin-settings'>Logga in</a>";
                         } else {
-                            echo "<a href='/src/user/settings.php' tabindex='0'>Inställningar</i></a>";
+                            echo "<a href='/src/user/installningar.php' tabindex='0' class='portal-loggin-settings'>Inställningar</i></a>";
                         }
                     ?>
                 </div>

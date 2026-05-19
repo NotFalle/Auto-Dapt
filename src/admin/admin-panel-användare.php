@@ -34,7 +34,7 @@
             <h2>Admin</h2>
             <a href="admin-panel.php" class="hover-animation">Dashboard</a>
             <a href="" class="active hover-animation">Användare</a>
-            <a href="/src/user/settings.php" class="hover-animation">Inställningar</a>
+            <a href="/src/user/installningar.php" class="hover-animation">Inställningar</a>
             <a href="/src/auth/logout.php" class="hover-animation">Logga ut</a>
         </div>
 

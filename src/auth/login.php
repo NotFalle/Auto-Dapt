@@ -37,6 +37,6 @@
     $_SESSION['username'] = $user['username'];
     $_SESSION['role'] = $user['role'];
 
-    header('Location: /src/user/settings.php');
+    header('Location: /src/user/installningar.php');
 
 ?>

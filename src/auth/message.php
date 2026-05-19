@@ -5,7 +5,7 @@
 
     // Om användaren inte är inloggad skickas den tillbaka
     if (!isLoggedIn()) {
-        header("Location: /products.php#reviews");
+        header("Location: /produkter.php#reviews");
         exit;
     }
 
@@ -14,13 +14,13 @@
 
     // Om meddelandet är tomt skickas användaren tillbaka
     if ($message === "") {
-        header("Location: /products.php#reviews");
+        header("Location: /produkter.php#reviews");
         exit;
     }
 
     // Om meddelandet är för långt skickas användaren tillbaka
     if (strlen($message) > 255) {
-        header("Location: /products.php#reviews");
+        header("Location: /produkter.php#reviews");
         exit;
     }
 
@@ -29,7 +29,7 @@
 
     // Om användaren inte finns skickas den tillbaka
     if (!$user) {
-        header("Location: /products.php#reviews");
+        header("Location: /produkter.php#reviews");
         exit;
     }
 
@@ -41,7 +41,7 @@
     createComment($userId, $username, $message);
 
     // Skicka tillbaka till reviews
-    header("Location: /products.php#reviews");
+    header("Location: /produkter.php#reviews");
     exit;
 
 ?>

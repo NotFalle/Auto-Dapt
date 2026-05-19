@@ -21,7 +21,7 @@
 
     // Om användarnamn eller e-post är tomt skickas användaren tillbaka med felmeddelande
     if ($username === "" || $email === "") {
-        header("Location: /src/user/settings.php?error=" . rawurlencode("Användarnamn och e-post får inte vara tomma."));
+        header("Location: /src/user/installningar.php?error=" . rawurlencode("Användarnamn och e-post får inte vara tomma."));
         exit;
     }
 
@@ -60,7 +60,7 @@
 
     // Om användarnamnet redan finns skickas användaren tillbaka med felmeddelande
     if ($result->num_rows > 0) {
-        header("Location: /src/user/settings.php?error=" . rawurlencode("Användarnamnet används redan."));
+        header("Location: /src/user/installningar.php?error=" . rawurlencode("Användarnamnet används redan."));
         exit;
     }
 
@@ -90,7 +90,7 @@
 
     // Om e-postadressen redan finns skickas användaren tillbaka med felmeddelande
     if ($result->num_rows > 0) {
-        header("Location: /src/user/settings.php?error=" . rawurlencode("E-postadressen används redan."));
+        header("Location: /src/user/installningar.php?error=" . rawurlencode("E-postadressen används redan."));
         exit;
     }
 
@@ -114,7 +114,7 @@
 
         // Om bilden inte kunde läsas skickas användaren tillbaka med felmeddelande
         if ($data === false) {
-            header("Location: /src/user/settings.php?error=" . rawurlencode("Profilbilden kunde inte läsas."));
+            header("Location: /src/user/installningar.php?error=" . rawurlencode("Profilbilden kunde inte läsas."));
             exit;
         }
 
@@ -134,7 +134,7 @@
 
         // Sparar den nya bilden i uploads-mappen
         if (file_put_contents($filePath, $data) === false) {
-            header("Location: /src/user/settings.php?error=" . rawurlencode("Profilbilden kunde inte sparas."));
+            header("Location: /src/user/installningar.php?error=" . rawurlencode("Profilbilden kunde inte sparas."));
             exit;
         }
 
@@ -184,8 +184,8 @@
     // Uppdaterar användarnamnet i sessionen
     $_SESSION["username"] = $username;
 
-    // Skickar tillbaka användaren till settings.php med success-meddelande
-    header("Location: /src/user/settings.php?success=" . rawurlencode("Kontouppgifterna sparades."));
+    // Skickar tillbaka användaren till installningar.php med success-meddelande
+    header("Location: /src/user/installningar.php?success=" . rawurlencode("Kontouppgifterna sparades."));
     exit;
 
 ?>

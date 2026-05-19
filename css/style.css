@@ -144,7 +144,9 @@ nav h1 {
     background: none;
     border: none;
 }
-
+.menusize{
+    font-size: 3rem;
+}
 .container {
     width: 100%;
     height: 1000px;
@@ -302,10 +304,8 @@ nav h1 {
 body.no-scroll {
     overflow: hidden;
 }
-@media(max-width:48rem){
-    .container-flexbox {
-        flex-direction: column;
-    }
+.portal-loggin-settings{
+        color: rgb(15, 243, 53);
 }
 
 /* ######################################## */
@@ -368,29 +368,7 @@ h2{color: #ffffff;}
     transition: 1.1s;
     cursor: pointer;
 }
-@media (max-width: 48rem){
 
-#contact-h1{
-    font-size: 1.8rem;
-}
-
-#contact-info{
-    font-size: 1.1rem;
-}
-
-#contact-container{
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.contact-flexbox{
-    padding: 1.5rem;
-}
-
-#contact-button-text{
-    font-size: 1.2rem;
-}
-}
 /* ######################################## */
 /* ############## Company-Contact ######### */
 /* ######################################## */
@@ -530,39 +508,7 @@ h2{color: #ffffff;}
   background-color: #555;
   cursor: pointer;
 }
-@media (max-width: 48rem){
-    
-#company-contact-container{
-    flex-direction: column;
-    width: 95%;
-    padding: 1rem;
-    gap: 2rem;
-}
 
-#company-contact-box1,#company-contact-box2{
-    width: 100%;
-    min-width: 100%;
-}
-
-.back-btn{
-    margin-left: 1rem;
-    font-size: 1.2rem;
-}
-
-#submit{
-    font-size: 1.4rem;
-    padding: 1rem;
-}
-
-.captcha{
-    flex-wrap: wrap;
-}
-
-#captcha-text{
-    font-size: 1rem;
-}
-    
-}
 #contact-e-post{
 background-color:  #025293;
 width: 20rem;
@@ -985,23 +931,7 @@ margin: auto;
 .selection-choice.active{
     border-bottom:0.2rem;
 }
-@media (max-width:70rem){
-    #product-page-main{
-        flex-direction: column;
-    }
-    .message-body{
-        width:100%;
-    }
 
-    .message-body input{
-        width: 100%;
-    }
-
-    .messages-container{
-        width:100%;
-        padding:1rem;
-    }
-}
 
 /* ################################################## */
 /* ############## Informations sida ################# */
@@ -1179,20 +1109,6 @@ margin: auto;
 .settings-btm button {
     font-size: 1rem;
     margin: 0;
-}
-@media(max-width:44rem){
-    .settings-flexbox {
-        gap: 2rem;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .settings-pfp-desc input {
-        width: 100%;
-        min-width: 0;
-    }
-
 }
 
 /* ######################################## */
@@ -1407,43 +1323,6 @@ margin: auto;
     text-align: center;
 }
 
-@media (max-width: 45rem){
-
-    #admin-panel-body{
-        flex-direction: column;
-    }
-
-    .sidebar{
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .sidebar{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-    }
-    .panel-layout{
-        width: 100%;
-        padding: 1rem;
-    }
-    .header{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    .table{
-        overflow-x: auto;
-    }
-
-    .table table{
-        min-width: 40rem;
-    }
-
-}
 
 /* ################################################## */
 /* ############## Login and Register ################ */
@@ -1461,12 +1340,13 @@ margin: auto;
 }
 
 .form {
-    max-width: max-content;
+    max-width:30rem;
     margin: auto;
     margin-top: 4rem;
     margin-bottom: 4rem;
     box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
+    
 }
 
 .req {
@@ -1487,15 +1367,11 @@ margin: auto;
 }
 
 .form-body {
-    width: 20rem;
-    margin: 0rem 3rem;
-
+    max-width: 20rem;
+    width: 100%;
+    padding: 0 1.5rem;
     display: flex;
     flex-direction: column;
-}
-
-.form-body p {
-    line-height: 0.4rem;
 }
 
 .form-group {
@@ -1604,67 +1480,130 @@ margin: auto;
 }
 
 
-
 /* ####################################### */
-/* ############## SANDBOX ################ */
+/* ############## Media Quarry ############*/
 /* ####################################### */
 
-#sandbox {
-    width: 40rem;
-    min-height: 20rem;
-    margin: auto;
-    margin-top: 4rem;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 2rem;
-    display: flex;
-    justify-content: center;
+@media (max-width:70rem){
+    #product-page-main{
+        flex-direction: column;
+    }
+    .message-body{
+        width:100%;
+    }
+
+    .message-body input{
+        width: 100%;
+    }
+
+    .messages-container{
+        width:100%;
+        padding:1rem;
+    }
+}
+@media(max-width:48rem){
+    .container-flexbox {
+        flex-direction: column;
+    }
+#contact-h1{
+    font-size: 1.8rem;
 }
 
-#button1 {
-    padding: 1rem 2rem;
-    margin: auto;
-    background-color: #00145f;
-    color: #fff;
-    border-radius: 1rem;
+#contact-info{
+    font-size: 1.1rem;
 }
 
-#button2 {
-    padding: 1rem 2rem;
-    margin: auto;
-    background-color: #f4af1b;
-    border-radius: 1rem;
+#contact-container{
+    flex-direction: column;
+    gap: 2rem;
 }
 
-#colorpalette {
-    width: 40rem;
-    min-height: 10rem;
-    margin: auto;
-    margin-top: 4rem;
-    border-radius: 1rem;
-    display: flex;
+.contact-flexbox{
+    padding: 1.5rem;
 }
 
-#colorpalette div {
-    flex: 1;
-    margin: 0.2rem;
-    border-radius: 0.5rem;
+#contact-button-text{
+    font-size: 1.2rem;
 }
 
-#color1 {
-    background-color: #030E4F;
+    
+#company-contact-container{
+    flex-direction: column;
+    width: 95%;
+    padding: 1rem;
+    gap: 2rem;
 }
 
-#color2 {
-    background-color: #06136A;
+#company-contact-box1,#company-contact-box2{
+    width: 100%;
+    min-width: 100%;
 }
 
-#color3 {
-    background-color: #22C55E;
+.back-btn{
+    margin-left: 1rem;
+    font-size: 1.2rem;
 }
 
-#color4 {
-    background-color: #16A34A;
+#submit{
+    font-size: 1.4rem;
+    padding: 1rem;
 }
-.menusize{
-    font-size: 3rem;
+
+.captcha{
+    flex-wrap: wrap;
+}
+
+#captcha-text{
+    font-size: 1rem;
+}
+    
+    #admin-panel-body{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .sidebar{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .panel-layout{
+        width: 100%;
+        padding: 1rem;
+    }
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .table{
+        overflow-x: auto;
+    }
+
+    .table table{
+        min-width: 40rem;
+    }
+
+}
+
+@media(max-width:44rem){
+    .settings-flexbox {
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .settings-pfp-desc input {
+        width: 100%;
+        min-width: 0;
+    }
+
 }

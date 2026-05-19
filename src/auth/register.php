@@ -4,7 +4,7 @@
     require_once __DIR__ . "/../functions.php";
 
     if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-        header("Location: /src/portal/register-portal.php");
+        header("Location: /src/portal/registrerings-portal.php");
         exit;
     }
 
@@ -18,13 +18,13 @@
 
     // Kontrollera att mail inte redan finns
     if (emailExists($email)) {
-        header("Location: /src/portal/register-portal.php?error=email");
+        header("Location: /src/portal/registrerings-portal.php?error=email");
         exit;
     }
 
     // Kontrollera att lösenorden matchar
     if ($password !== $password_confirm) {
-        header("Location: /src/portal/register-portal.php?error=password"); // Annars -> skickar tillbaka användaren
+        header("Location: /src/portal/registrerings-portal.php?error=password"); // Annars -> skickar tillbaka användaren
         exit;
     };
 
@@ -37,7 +37,7 @@
     $statement->execute();
 
     // Skicka tillbaka till startsidan
-    header('Location: /src/portal/login-portal.php');
+    header('Location: /src/portal/inloggningsportal.php');
 
 
 ?>

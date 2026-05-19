@@ -1,11 +1,9 @@
 <?php
-    require_once __DIR__ . "/../functions.php";
+    require_once "src/functions.php";
     trackVisitor();
 ?>
-
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,63 +48,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Load CSS files and set title -->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/fonts.css">
-    <title>Logga in - Auto-Dapt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <title>Information - Autodapt</title>
 </head>
-
 <body>
-    <section class="form-nav">
-        <a href="/index.php" class="btn-info form-nav-btn btn-animation">Tillbaka</a>
-    </section>
-    <section class="form">
-
-        <form action="/src/auth/login.php" method="POST">
-            <div class="form-hdr">
-                <h1 class="poppins-700">Logga in</h1>
-            </div>
-            <div class="form-body">
-                <p>Logga in på ditt konto för att fortsätta.</p>
-                <div class="form-group">
-                    <div class="form-label">
-                        <label for="uname">Användarnamn<span class="req">*</span></label>
+    <section class="page-banner">
+        <nav>
+            <div class="nav-container">
+           
+                <div class="hdr-boxes">
+                    <div id= "sidenav" class="sidenav">
+                        <div id="sidenav-hdr">
+                            <a href="javascript:void(0)" class="closebutton"
+                            onclick="closeNav()">&times;</a>
+                        </div>
+                        <div id="sidenav-content">
+                            <a href="index.php" class="btn-animation">Hem</a>
+                            <a href="kontakt.php" class="btn-animation">Kontakta</a>
+                        </div>
                     </div>
-                    <div class="form-input">
-                        <i class="fa-sharp fa-light fa-circle-user left"></i>
-                        <input class="left-input" type="text" minlength="3" maxlength="20" name="username" id="uname" placeholder="Mystisk Användare" required>
-                    </div>
-                    
+                    <button onclick="openNav()" tabindex="0" id="menu-btn">
+                        <i class="fa-notdog fa-solid fa-bars button-action menusize"></i>
+                    </button>  
                 </div>
-
-                <div class="form-group">
-                    <div class="form-label">
-                        <label for="pword">Lösenord<span class="req">*</span></label>
-                    </div>
-                    <div class="form-input">
-                        <i class="fa-sharp fa-light fa-key left"></i>
-                        <input class="both-input" type="password" minlength="12" maxlength="250" name="password" id="pword" placeholder="Klurigt Lösenord" required>
-                        <i class="fa-sharp fa-light fa-eye-slash right toggle-password"></i>
-                    </div>
+                <div id="sidenav-overlay"></div>   
+                
+                <div id="brand">
+                    <h1 class="poppins-700">Auto-Dapt</h1>
                 </div>
+                <div class="hdr-boxes">
+                    <?php
+                        // Om inte session-variabel finns eller inte är TRUE
+                        if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
+                            echo "<a href='src/portal/inloggningsportal.php' tabindex='0' class='portal-loggin-settings'>Logga in</a>";
+                        } else {
+                            echo "<a href='/src/user/installningar.php' tabindex='0' class='portal-loggin-settings'>Inställningar</i></a>";
+                        }
+                    ?>                </div>
             </div>
-            <?php
-                if(isset($_GET['error']) && $_GET['error'] == "login"){
-                    echo "<p class='error'><i class='fa-sharp fa-light fa-circle-exclamation'></i> Fel användarnamn eller lösenord.</p>";
-                }
-            ?>
-            <div class="form-btm">
-                <button type="submit" class="no-border btn-CTA btn-animation">Logga in</button>
-                <a href="register-portal.php" class="btn-info btn-animation">Registrera</a>
-            </div>
-        </form>
-    </section>
+        </nav>
+        <button class="back-btn" onclick="history.back()">Tillbaka</button>
+        <div id="info-padge-contatiner">
+            <h1 class="info-padge-h1">Produktbeskrivning</h1>
+            <p class="info-padge-text">Produkten är en smart el-adapter som placeras mellan kontakt till elektrisk apparat och 230 volts vägguttaget. Adaptern ansluts till routern och styrs via mobilen i en app, detta gör det möjligt att automatisera och optimera elförbrukningen med hjälp av olika kategorier med drag-and-drop funktion för att byta kategori med schema enkelt. Den hierarkiska strukturen av kategorier finns där för att kunden enkelt ska kunna bygga olika scheman för olika kategorier som i sig kan bestämma över de underkategorier den innehåller. Kategoriernas scheman kan styras av externa funktioner som till exempelvis larm sensorer eller externa system som digitala kalendrar. När ett schema i till exempelvis en extern kalender uppdateras, så justeras strömförbrukningen automatiskt i realtid.</p>
+            <h1 class="info-padge-h1">Funktionalitet</h1>
+            <p class="info-padge-text">Adaptern kopplas in i nätverket via router och kan nås via appen i en mobil enhet. Kategorisystemet styr över adaptrar och underkategorier, det finns möjlighet att bygga strukturer för olika hus och enkelt byta vad en adapter ska följa för kategori med hjälp av drag-and-drop funktionen. Ett schema har tidsstyrning med automatiska uppdateringar från externa källor. Några exempel på externa källor skulle kunna vara: skolscheman, larmsystem och sensorer.
+</p>
+        </div>
 
-    <script src="/js/password-toggle-login.js"></script>
-    <script src="/js/ping.js"></script>
+    </section>
+        <script src="js/main.js"></script>
+
 </body>
-<footer>
-    <p id="version"></p>
-    <script src="/js/version.js"></script>
-</footer>
-
 </html>

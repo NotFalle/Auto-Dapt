@@ -52,7 +52,7 @@
         $statement->execute();
 
         // Skicka tillbaka till startsidan
-        header('Location: /src/portal/login-portal.php');
+        header('Location: /src/portal/inloggningsportal.php');
 
     }
 

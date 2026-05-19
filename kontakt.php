@@ -2,6 +2,7 @@
     require_once "src/functions.php";
     trackVisitor();
 ?>
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -50,8 +51,9 @@
     <!-- Load CSS files and set title -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <title>Information - Autodapt</title>
+    <title>Kontakt - Autodapt</title>
 </head>
+
 <body>
     <section class="page-banner">
         <nav>
@@ -65,40 +67,59 @@
                         </div>
                         <div id="sidenav-content">
                             <a href="index.php" class="btn-animation">Hem</a>
-                            <a href="contact.php" class="btn-animation">Kontakta</a>
+                            <a href="produkter.php" class="btn-animation">Produkter</a>
                         </div>
                     </div>
                     <button onclick="openNav()" tabindex="0" id="menu-btn">
                         <i class="fa-notdog fa-solid fa-bars button-action menusize"></i>
                     </button>  
                 </div>
-                <div id="sidenav-overlay"></div>   
-                
-                <div id="brand">
+                <div id="sidenav-overlay"></div> 
+
+                 <div id="brand">
                     <h1 class="poppins-700">Auto-Dapt</h1>
                 </div>
                 <div class="hdr-boxes">
                     <?php
                         // Om inte session-variabel finns eller inte är TRUE
                         if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
-                            echo "<a href='src/portal/login-portal.php' tabindex='0'>Logga in</a>";
+                            echo "<a href='src/portal/inloggningsportal.php' tabindex='0'class='portal-loggin-settings'>Logga in</a>";
                         } else {
-                            echo "<a href='/src/user/settings.php' tabindex='0'>Inställningar</i></a>";
+                            echo "<a href='/src/user/installningar.php' tabindex='0' class='portal-loggin-settings'>Inställningar</i></a>";
                         }
                     ?>                </div>
             </div>
         </nav>
-        <button class="back-btn" onclick="history.back()">Tillbaka</button>
-        <div id="info-padge-contatiner">
-            <h1 class="info-padge-h1">Produktbeskrivning</h1>
-            <p class="info-padge-text">Produkten är en smart el-adapter som placeras mellan kontakt till elektrisk apparat och 230 volts vägguttaget. Adaptern ansluts till routern och styrs via mobilen i en app, detta gör det möjligt att automatisera och optimera elförbrukningen med hjälp av olika kategorier med drag-and-drop funktion för att byta kategori med schema enkelt. Den hierarkiska strukturen av kategorier finns där för att kunden enkelt ska kunna bygga olika scheman för olika kategorier som i sig kan bestämma över de underkategorier den innehåller. Kategoriernas scheman kan styras av externa funktioner som till exempelvis larm sensorer eller externa system som digitala kalendrar. När ett schema i till exempelvis en extern kalender uppdateras, så justeras strömförbrukningen automatiskt i realtid.</p>
-            <h1 class="info-padge-h1">Funktionalitet</h1>
-            <p class="info-padge-text">Adaptern kopplas in i nätverket via router och kan nås via appen i en mobil enhet. Kategorisystemet styr över adaptrar och underkategorier, det finns möjlighet att bygga strukturer för olika hus och enkelt byta vad en adapter ska följa för kategori med hjälp av drag-and-drop funktionen. Ett schema har tidsstyrning med automatiska uppdateringar från externa källor. Några exempel på externa källor skulle kunna vara: skolscheman, larmsystem och sensorer.
-</p>
+        <div id="contactpadge-container">
+            <h1 id="contact-h1"class="poppins-800 text-primary-color">Använd Auto-Dapt idag och spara upp till 30% på el räkningen utan att lyfta ett finger!</h1>
+            <p id="contact-info"class="text-primary-color">Har du frågor eller funderingar över våra smarta adaptrar? Tveka inte att gå in och läsa våra FAQ och har du några övriga frågor så finns vi tillägänliga via telefon <strong>9-17 </strong> på vardagar eller skicka ett majl och få svar inom <strong>48</strong> timmar</p>
+            <div id="contact-container">
+                <div class="contact-flexbox">
+                    <h2>Våra kontakt uppgifter:</h2>
+                    <button class="contact-button"><p class="contact-contactinfo text-primary-color"><b>Ring oss på: 46-70 123 45 67</b></p></button>
+                     <button class="contact-button" onclick="location.href='https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjgCQbTSxKfVdHqRQGJCJbdMWvtvhcwpMdJLlfvlMKMBTqbCHLzlWQtTjRzxSgzmCwGbbg'"><p class="contact-contactinfo"class="text-primary-color"><b>Skirv mail till: Auto-Dapt@gmail.com</b></p></button>
+                </div>
+               
+                <div class="contact-flexbox">
+                    <h2>Intresserad av att sammarbeta?</h2>
+                    <button class="contact-button" onclick="location.href='företag-kontaktsida.php'">
+                        <p id="contact-button-text"class="text-primary-color"><b>Kontakt oss</b></p>
+                    </button>
+                </div>
+
+                
+            </div>
+
         </div>
-
+           
+        <div class="container">
+            </div>    
+             
+    
+    
+        </div>
     </section>
-        <script src="js/main.js"></script>
-
+    <script src="js/main.js"></script>
 </body>
+
 </html>
