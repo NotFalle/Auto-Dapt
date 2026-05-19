@@ -111,7 +111,6 @@
             </div>
         </div>
     </section>
-    <a href="admin/admin-panel.php">admin</a>
     <script src="js/main.js"></script>
     <script src="js/ping.js"></script>
 </body>
