@@ -130,6 +130,10 @@ nav h1 {
     font-family: var(--brand-name);
 }
 
+#index-porduct-img {
+    border-radius: 50%;
+}
+
 .button-action{
     cursor: pointer;
     transition: 200ms;
@@ -611,11 +615,8 @@ margin: auto;
     border:0.12rem solid transparent;
     cursor:pointer;
 }
-#moreimages-special-black{
-    background-color: #000000 !important;
-}
 .moreimages-special-white{
-    background-color: #ffffff !important;
+    background-color: white !important;
 }
 .moreimages.active{
     border-color:rgb(0, 0, 0);

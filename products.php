@@ -133,26 +133,26 @@
                 <!-- Produktbilder -->
                 <section class="product-preview">
 
-                    <div class="selected-image">
-                        <img src="img/auto-dapt-product.png" alt="Product Image">
+                    <div class="moreimages-special-white selected-image">
+                        <img src="img/autodapt-product.webp" alt="Product Image">
                     </div>
 
                     <div id="moreimages-container">
 
-                        <div class="moreimages active">
-                            <img src="img/auto-dapt-product.png" alt="Product Image">
-                        </div>
-
-                        <div class="moreimages" id="moreimages-special-black">
-                            <img src="img/auto-dapt-product-pink.png" alt="Product Image">
+                        <div class="moreimages moreimages-special-white active">
+                            <img src="img/autodapt-product.webp" alt="autodapt product image">
                         </div>
 
                         <div class="moreimages moreimages-special-white">
-                            <img src="img/auto-dapt-product-blue.png" alt="Product Image">
+                            <img src="img/autodapt-product-blue.webp" alt="blue autodapt product image">
                         </div>
 
                         <div class="moreimages moreimages-special-white">
-                            <img src="img/auto-dapt-product-yellow.png" alt="Product Image">
+                            <img src="img/autodapt-product-pink.webp" alt="pink autodapt product image">
+                        </div>
+
+                        <div class="moreimages moreimages-special-white">
+                            <img src="img/autodapt-product-yellow.webp" alt="yellow autodapt product image">
                         </div>
                     </div>
                 </section>

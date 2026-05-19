@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <button onclick="openNav()" tabindex="0" id="menu-btn">
-                        <i class="fa-notdog fa-solid fa-bars button-action menusize"></i>
+                        <i class="fa-sharp fa-light fa-bars button-action menusize"></i>
                     </button>  
                 </div>
                 <div id="sidenav-overlay"></div>   
@@ -105,13 +105,12 @@
                         </div>
                     </div>
                     <div class="cnt-flex-right">
-                        <img src="img/auto-dapt-product.png" alt="Product Image">
+                        <img id="index-porduct-img" src="img/autodapt-product.webp" alt="autodapt product image">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <a href="admin/admin-panel.php">admin</a>
     <script src="js/main.js"></script>
     <script src="js/ping.js"></script>
 </body>
