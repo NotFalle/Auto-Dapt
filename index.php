@@ -105,7 +105,7 @@
                         </div>
                     </div>
                     <div class="cnt-flex-right">
-                        <img src="img/auto-dapt-product.png" alt="Product Image">
+                        <img src="img/autodapt-product.webp" alt="autodapt product image">
                     </div>
                 </div>
             </div>
