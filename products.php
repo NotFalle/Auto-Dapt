@@ -128,17 +128,17 @@
                 <!-- Produktbilder -->
                 <section class="product-preview">
 
-                    <div class="selected-image">
+                    <div class="moreimages-special-white selected-image">
                         <img src="img/autodapt-product.webp" alt="Product Image">
                     </div>
 
                     <div id="moreimages-container">
 
-                        <div class="moreimages active">
+                        <div class="moreimages moreimages-special-white active">
                             <img src="img/autodapt-product.webp" alt="autodapt product image">
                         </div>
 
-                        <div class="moreimages" id="moreimages-special-black">
+                        <div class="moreimages moreimages-special-white">
                             <img src="img/autodapt-product-blue.webp" alt="blue autodapt product image">
                         </div>
 

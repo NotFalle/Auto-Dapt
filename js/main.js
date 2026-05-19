@@ -29,9 +29,7 @@ thumbnails.forEach(thumbnail => {
         });
 
         thumbnail.classList.add("active");
-        if(thumbnail.id === "moreimages-special-black"){
-          selectedImage.style.backgroundColor = "black";}
-        else if (thumbnail.classList.contains("moreimages-special-white")) {
+        if (thumbnail.classList.contains("moreimages-special-white")) {
             selectedImage.style.backgroundColor = "white";
         } 
         else {
