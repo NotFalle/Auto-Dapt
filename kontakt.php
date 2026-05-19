@@ -111,13 +111,6 @@
             </div>
 
         </div>
-           
-        <div class="container">
-            </div>    
-             
-    
-    
-        </div>
     </section>
     <script src="js/main.js"></script>
 
