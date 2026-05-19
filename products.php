@@ -100,7 +100,6 @@
                         <div id="sidenav-content">
                             <a href="index.php" class="btn-animation">Hem</a>
                             <a href="contact.php" class="btn-animation">kontakt</a>
-                            <a href="" class="btn-animation">Forum</a>
                         </div>
                     </div>
                     <button onclick="openNav()" tabindex="0" id="menu-btn">
@@ -113,8 +112,14 @@
                     <h1 class="poppins-700">Auto-Dapt</h1>
                 </div>
                 <div class="hdr-boxes">
-                    <a href="login-portal.php" tabindex="0">Logga in <i class="fa-solid fa-circle-user"></i></a>
-                </div>
+                    <?php
+                        // Om inte session-variabel finns eller inte är TRUE
+                        if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != TRUE) {
+                            echo "<a href='src/portal/login-portal.php' tabindex='0'>Logga in</a>";
+                        } else {
+                            echo "<a href='/src/user/settings.php' tabindex='0'>Inställningar</i></a>";
+                        }
+                    ?>                </div>
             </div>
         </nav>
     

@@ -1030,6 +1030,8 @@ margin: auto;
 .settings-container {
     box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
+    width: 90%;
+    max-width: 50rem;
 }
 
 .settings-hdr {
@@ -1044,12 +1046,12 @@ margin: auto;
     margin: 0;
     margin-left: 1rem;
 }
-
 .settings-body {
-    width: 40rem;
+    width: 100%;
+    max-width: 40rem;
     min-height: 35rem;
-    margin: 0rem 3rem;
-
+    margin: 0 auto;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1064,9 +1066,7 @@ margin: auto;
 .settings-flexbox {
     display: flex;
     gap: 4rem;
-    
     padding: 2rem;
-    
     background-color: #ddd;
     border-radius: 0.5rem;
 }
@@ -1076,13 +1076,10 @@ margin: auto;
     margin: 0;
     width: 8rem;
     height: 8rem;
-
     border: 3px dashed #6aa6ff;
     border-radius: 50%;
-
     cursor: pointer;
     transition: 0.2s ease;
-
 }
 
 .settings-pfp img {
@@ -1172,6 +1169,15 @@ margin: auto;
 .settings-btm button {
     font-size: 1rem;
     margin: 0;
+}
+@media(max-width:44rem){
+    .settings-flexbox {
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 /* ######################################## */

@@ -7,7 +7,7 @@
     // Om inte är admin ->
     if (!isAdmin()) {
         // -> skicka iväg användaren.
-        header('Location: index.php');
+        header('Location: /index.php');
         exit();
     }
 
