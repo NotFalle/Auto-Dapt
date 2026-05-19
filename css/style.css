@@ -168,8 +168,8 @@ nav h1 {
 
 .cnt-flex-right img {
     width: 100%;
-    max-width: 18.7rem;
-    height: auto; 
+    max-width: 300px;
+    height: auto;
 }
 
 .button-row {
@@ -298,22 +298,7 @@ body.no-scroll {
     overflow: hidden;
 }
 
-@media(max-width: 48rem){
 
-    .container-flexbox{
-        flex-direction: column;
-        text-align: left;
-    }
-    .cnt-flex-left{
-        width: 100%;
-    }
-    .button-row{
-        justify-content: flex-start;
-    }
-    .container-middle{
-        text-align: left;
-    }
-}
 /* ######################################## */
 /* ############## Contact ################ */
 /* ######################################## */
@@ -505,21 +490,21 @@ h2{color: #ffffff;}
     color: #000000;
 }
 
-#submit {
-    width: 100%;
-    padding: 2rem;
-    background: #6c737e;
-    border: none;
-    border-radius: 0.8rem;
-    color: rgb(255, 255, 255);
-    font-size: 2rem;
-    cursor: pointer;
-    transition: 0.2s;
-}
+    #submit {
+      width: 100%;
+      padding: 2rem;
+      background: #6c737e;
+      border: none;
+      border-radius: 0.8rem;
+      color: rgb(255, 255, 255);
+      font-size: 2rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
 
-#submit:hover {
-    background: #585858;
-}
+    #submit:hover {
+      background: #585858;
+    }
 .back-btn {
     padding: 1rem;
     border: none;
@@ -570,16 +555,16 @@ h2{color: #ffffff;}
     
 }
 #contact-e-post{
-    background-color:  #025293;
-    width: 20rem;
-    height: 10rem;
-    margin: auto;
+background-color:  #025293;
+width: 20rem;
+height: 10rem;
+margin: auto;
 }
 #contact-phone-number{
-    background-color: #025293;
-    width: 20rem;
-    height: 10rem;
-    margin: auto;
+background-color: #025293;
+width: 20rem;
+height: 10rem;
+margin: auto;
 }
 /* ######################################## */
 /* ############## PRODUCTS ################ */
@@ -739,12 +724,7 @@ h2{color: #ffffff;}
 }
 }
 
-.selection-content {
-    display: none;
-}
-.selection-content.active {
-    display: block;
-}
+
 #product-selection-menu .selection-choice {
     cursor: pointer;
     color: #737373;
@@ -756,20 +736,7 @@ h2{color: #ffffff;}
     color: white;
     border-bottom: 0.3rem solid white;
 }
-.selection-choice{
-    display:flex;
-    gap:2.5rem;
-    border: transparent;
-    border-bottom:0.1rem solid #cecdcd ; 
-    padding-bottom:1.2rem;
-    margin-bottom:2.5rem;
-    font-weight:bold;
-    cursor:pointer;
-    background-color: transparent;
-}
-.selection-choice.active{
-    border-bottom:0.2rem;
-}
+
 #product-selection-menu{
     display: flex;
     gap: 2.5rem;
@@ -784,24 +751,254 @@ h2{color: #ffffff;}
     font-size: 1.2rem;
 }
 
-
-
-
-
-
-
-.products {
-    width: 1000px;
-    margin: auto;
+#reviews.active {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+#reviews.active hr {
+    width: 100%;
+}
+
+.review-container {
+    min-width: 50rem;
+    min-height: 40rem;
+    max-width: 80rem;
+
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.messages-body {
+    
+    background-color: #025293;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 58rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+.messages-body form {
+    width: 52.5rem;
+    max-width: fit-content;
+    background-color: #014175;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.message-hdr {
+
+    width: 100%;
+
+}
+
+.message-hdr label {
+
+    color: white;
+    
+}
+
+.message-body {
+    padding: 0.5rem;
+    width: 50rem;
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-body input {
+
+    width: 50rem;
+    min-height: 2rem;
+
+    border: 1px solid black;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+
+}
+
+.message-body button {
+
+    height: 2rem;
+    width: 2rem;
+
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.message-body button:hover {
+
+    cursor: pointer;
+
+}
+
+#msg-btn {
+
+    font-size: 1rem;
+
+}
+
+.messages-container {
+    width: 52.5rem;
+    background-color: #014175;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.message {
+    background-color: #025293;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.message .message-hdr img, .message .message-hdr div .default-pfp {
+    background-color: white;
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 0.25rem;
+    border-radius: 50%;
+}
+
+.message-hdr {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.message-hdr-desc {
+    color: white;
+    margin-left: 1rem;
+    line-height: 0.4rem;
+    min-width: max-content;
+}
+
+.message-hdr-time {
+    width: 100%;
+    height: 4.5rem;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+.message-hdr-time .msg-right {
+    color: white;
+    width: fit-content;
+    margin: 0;
+}
+
+.message-hdr-desc .small {
+    font-size: 0.8rem;
+}
+
+.message-hdr-desc .admin {
+    color: #be5dff;
+    
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.message-hdr-desc .member {
+    color: #19a84d;
+    
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.message-hdr-desc .og {
+    color: #ddc525;
+    
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.message-content {
+
+    color: black;
+    background-color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+    max-width: 48rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+}
+
+
+.selection-content {
+    display: none;
+}
+
+.selection-content.active {
+    display: block;
+}
+
+.selection-choice{
+    display:flex;
+    gap:2.5rem;
+    border: transparent;
+    border-bottom:0.1rem solid #cecdcd ; 
+    padding-bottom:1.2rem;
+    margin-bottom:2.5rem;
+    font-weight:bold;
+    cursor:pointer;
+    background-color: transparent;
+}
+
+.selection-choice.active{
+    border-bottom:0.2rem;
+}
+
 /* ################################################## */
 /* ############## Informations sida ################# */
 /* ################################################## */
 #info-padge-contatiner{
     max-width: 70rem;
-    min-height: 40rem;
+    min-height: 100rem;
     margin: auto;
     gap: 5rem;
     background-color: #00145f;
@@ -1054,6 +1251,7 @@ h2{color: #ffffff;}
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
     display: flex;
     height: 100vh;
     background: var(--ad-background);
