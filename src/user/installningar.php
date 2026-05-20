@@ -190,7 +190,7 @@
                     }
                 ?>
                 <div class="settings-btm">
-                    <button type="submit" class="no-border btn-CTA btn-animation">Spara kontouppgifter</button>
+                    <button type="submit" class="no-border btn-cta btn-animation">Spara kontouppgifter</button>
                     <a href="/src/auth/logout.php" class="btn-logout btn-animation">Logga ut</a>
                 </div>
             </form>
@@ -211,7 +211,7 @@
                 <button
                     type="button"
                     id="cropOk"
-                    class="zero-mrg btn-CTA hover-animation"
+                    class="zero-mrg btn-cta hover-animation"
                 >
                     OK
                 </button>

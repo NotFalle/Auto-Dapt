@@ -100,7 +100,7 @@
                         <h1 class="poppins-800 text-primary-color">Spara upp till 30% elektricitet!</h1>
                         <p class="text-primary-color">Vi siktar mot en energisnål framtid, en framtid utan energitjuvar. Vårt mål är att skapa lösningar för billigare energi och mindre miljöpåverkan.</p>
                         <div class="button-row">
-                            <a class="btn-CTA btn-animation" href="produkter.php">Köp nu</a>
+                            <a class="btn-cta btn-animation" href="produkter.php">Köp nu</a>
                             <a class="btn-info btn-animation" href="informationssida.php">Så funkar det</a>
                         </div>
                     </div>

@@ -95,7 +95,7 @@
                 }
             ?>
             <div class="form-btm">
-                <button type="submit" class="no-border btn-CTA btn-animation">Logga in</button>
+                <button type="submit" class="no-border btn-cta btn-animation">Logga in</button>
                 <a href="registrerings-portal.php" class="btn-info btn-animation">Registrera</a>
             </div>
         </form>

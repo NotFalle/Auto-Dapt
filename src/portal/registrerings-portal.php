@@ -132,7 +132,7 @@
                 ?>
             </div>
             <div class="form-btm">
-                <button type="submit" class="no-border btn-CTA btn-animation">Registrera</button>
+                <button type="submit" class="no-border btn-cta btn-animation">Registrera</button>
                 <a href="inloggningsportal.php" class="btn-animation">Jag har redan ett konto <i class="fa-sharp fa-light fa-arrow-right"></i></a>
             </div>
         </form>
